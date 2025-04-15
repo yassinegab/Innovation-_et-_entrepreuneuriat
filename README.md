@@ -2,7 +2,7 @@
 
 # Nom du Projet Innovation et entrepreuneuriat
 ## Description 
-ProjetManagement est une application web de gestion des projets.
+Notre projet est une plateforme innovante qui permet aux entrepreneurs de partager leurs idées de startup, d’obtenir des conseils et d’entrer en contact avec des sponsors, des investisseurs et des collaborateurs. En connectant les innovateurs aux bonnes ressources, nous facilitons le passage de l’idée à la réalité et encourageons l’entrepreneuriat.
 ## Table des Matières
 - [Installation](#installation)
 - [Utilisation](#utilisation)
@@ -60,9 +60,13 @@ Nous remercions tous ceux qui ont contribué à ce projet !
 
 Les personnes suivantes ont contribué à ce projet en ajoutant des fonctionnalités, en corrigeant des bugs ou en améliorant la documentation :
 
-- [Utilisateur1](https://github.com/utilisateur1) - Correction de bugs et amélioration des performances etc ...
-- [Utilisateur2](https://github.com/utilisateur2) - Ajout de la fonctionnalité X etc ...
-- [Utilisateur3](https://github.com/utilisateur3) - Rédaction de la documentation etc ...
+- [yassine gabsi](https://github.com/yassinegab) - gestion des blogs
+- [moez touil](https://github.com/moeztouilll) - gestion de collaboration
+- [dhia din djebbi](https://github.com/DhiaDjebbi) - gestion users 
+- [maryem bennour](https://github.com/meriembenn) - gestion de projet
+- [takwa boutaib](https://github.com/Takouabettaieb) - gestion de consultation
+- [eya boughdiri](https://github.com/utilisateur3) - gestion des evenement 
+
 
 Si vous souhaitez contribuer, suivez les étapes ci-dessous pour faire un **fork**, créer une nouvelle branche et soumettre une **pull request**.
 
