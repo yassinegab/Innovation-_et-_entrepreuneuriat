@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EntrepreneuHub - Plateforme de blogs pour entrepreneurs</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <i class="fa-solid fa-lightbulb"></i>
+                <h1>EntrepreneuHub</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">Accueil</a></li>
+                    <li><a href="#">Articles</a></li>
+                    <li><a href="#">Catégories</a></li>
+                    <li><a href="#">À propos</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <div class="search-bar">
+                    <input type="text" placeholder="Rechercher...">
+                    <button><i class="fa-solid fa-search"></i></button>
+                </div>
+                <button class="btn-primary"><i class="fa-solid fa-plus"></i> Publier</button>
+                <div class="profile-menu">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Photo de profil">
+                    <div class="dropdown-menu">
+                        <a href="#">Mon profil</a>
+                        <a href="#">Mes articles</a>
+                        <a href="#">Paramètres</a>
+                        <a href="#">Déconnexion</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h2>Partagez vos idées et expériences entrepreneuriales</h2>
+                    <p>Rejoignez notre communauté d'entrepreneurs passionnés et partagez vos connaissances</p>
+                    <button class="btn-primary">Commencer à écrire</button>
+                </div>
+                <div class="hero-image">
+                    <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="Entrepreneurs travaillant ensemble">
+                </div>
+            </div>
+        </section>
+
+        <section class="trending">
+            <div class="container">
+                <div class="section-header">
+                    <h3>Articles tendance</h3>
+                    <a href="#" class="view-all">Voir tout <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="articles-grid">
+                    <article class="article-card featured">
+                        <div class="article-image">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="Article image">
+                            <span class="category">Stratégie</span>
+                        </div>
+                        <div class="article-content">
+                            <h4>Comment lever des fonds pour votre startup en 2023</h4>
+                            <p>Découvrez les meilleures stratégies pour convaincre les investisseurs et sécuriser le financement dont vous avez besoin.</p>
+                            <div class="article-meta">
+                                <div class="author">
+                                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Author">
+                                    <span>Sophie Martin</span>
+                                </div>
+                                <div class="stats">
+                                    <span><i class="fa-regular fa-eye"></i> 1.2k</span>
+                                    <span><i class="fa-regular fa-comment"></i> 24</span>
+                                    <span><i class="fa-regular fa-bookmark"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="article-card">
+                        <div class="article-image">
+                            <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="Article image">
+                            <span class="category">Marketing</span>
+                        </div>
+                        <div class="article-content">
+                            <h4>10 techniques de growth hacking à essayer maintenant</h4>
+                            <p>Ces stratégies peu coûteuses peuvent aider votre entreprise à se développer rapidement.</p>
+                            <div class="article-meta">
+                                <div class="author">
+                                    <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="Author">
+                                    <span>Thomas Dubois</span>
+                                </div>
+                                <div class="stats">
+                                    <span><i class="fa-regular fa-eye"></i> 856</span>
+                                    <span><i class="fa-regular fa-comment"></i> 12</span>
+                                    <span><i class="fa-regular fa-bookmark"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="article-card">
+                        <div class="article-image">
+                            <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="Article image">
+                            <span class="category">Productivité</span>
+                        </div>
+                        <div class="article-content">
+                            <h4>Comment j'ai construit une entreprise rentable en travaillant 4 heures par jour</h4>
+                            <p>Les secrets d'une gestion du temps efficace pour les entrepreneurs occupés.</p>
+                            <div class="article-meta">
+                                <div class="author">
+                                    <img src="https://randomuser.me/api/portraits/women/22.jpg" alt="Author">
+                                    <span>Julie Leroy</span>
+                                </div>
+                                <div class="stats">
+                                    <span><i class="fa-regular fa-eye"></i> 1.5k</span>
+                                    <span><i class="fa-regular fa-comment"></i> 38</span>
+                                    <span><i class="fa-regular fa-bookmark"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="latest">
+            <div class="container">
+                <div class="section-header">
+                    <h3>Articles récents</h3>
+                    <a href="#" class="view-all">Voir tout <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+                <div class="articles-list">
+                    <article class="article-list-item">
+                        <div class="article-list-content">
+                            <div class="article-list-meta">
+                                <span class="category">Finance</span>
+                                <span class="date">Il y a 2 jours</span>
+                            </div>
+                            <h4>Les erreurs fiscales que font la plupart des entrepreneurs débutants</h4>
+                            <p>Évitez ces pièges courants qui peuvent coûter cher à votre entreprise en phase de démarrage.</p>
+                            <div class="article-meta">
+                                <div class="author">
+                                    <img src="https://randomuser.me/api/portraits/men/42.jpg" alt="Author">
+                                    <span>Pierre Durand</span>
+                                </div>
+                                <div class="stats">
+                                    <span><i class="fa-regular fa-eye"></i> 723</span>
+                                    <span><i class="fa-regular fa-comment"></i> 9</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="article-list-image">
+                            <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1742&q=80" alt="Article image">
+                        </div>
+                    </article>
+                    
+                    <article class="article-list-item">
+                        <div class="article-list-content">
+                            <div class="article-list-meta">
+                                <span class="category">Leadership</span>
+                                <span class="date">Il y a 3 jours</span>
+                            </div>
+                            <h4>5 habitudes des entrepreneurs à succès que vous devriez adopter</h4>
+                            <p>Ces pratiques quotidiennes peuvent transformer votre approche entrepreneuriale et améliorer vos résultats.</p>
+                            <div class="article-meta">
+                                <div class="author">
+                                    <img src="https://randomuser.me/api/portraits/women/33.jpg" alt="Author">
+                                    <span>Marie Petit</span>
+                                </div>
+                                <div class="stats">
+                                    <span><i class="fa-regular fa-eye"></i> 1.1k</span>
+                                    <span><i class="fa-regular fa-comment"></i> 17</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="article-list-image">
+                            <img src="https://images.unsplash.com/photo-1507099985932-87a4520ed1d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1738&q=80" alt="Article image">
+                        </div>
+                    </article>
+                    
+                    <article class="article-list-item">
+                        <div class="article-list-content">
+                            <div class="article-list-meta">
+                                <span class="category">Innovation</span>
+                                <span class="date">Il y a 5 jours</span>
+                            </div>
+                            <h4>Comment l'IA transforme le paysage entrepreneurial en 2023</h4>
+                            <p>Découvrez les opportunités et défis que l'intelligence artificielle apporte aux entrepreneurs modernes.</p>
+                            <div class="article-meta">
+                                <div class="author">
+                                    <img src="https://randomuser.me/api/portraits/men/91.jpg" alt="Author">
+                                    <span>Lucas Bernard</span>
+                                </div>
+                                <div class="stats">
+                                    <span><i class="fa-regular fa-eye"></i> 2.3k</span>
+                                    <span><i class="fa-regular fa-comment"></i> 42</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="article-list-image">
+                            <img src="https://images.unsplash.com/photo-1531746790731-6c087fecd65a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1752&q=80" alt="Article image">
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="article-detail">
+            <div class="container">
+                <div class="article-header">
+                    <div class="breadcrumb">
+                        <a href="#">Accueil</a> / <a href="#">Articles</a> / <a href="#">Stratégie</a>
+                    </div>
+                    <h2>Comment lever des fonds pour votre startup en 2023</h2>
+                    <div class="article-meta-large">
+                        <div class="author">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Author">
+                            <div>
+                                <span class="name">Sophie Martin</span>
+                                <span class="date">Publié le 15 avril 2023 • 12 min de lecture</span>
+                            </div>
+                        </div>
+                        <div class="actions">
+                            <button><i class="fa-regular fa-bookmark"></i> Sauvegarder</button>
+                            <button><i class="fa-solid fa-share-nodes"></i> Partager</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="article-content-full">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="Article header image" class="article-main-image">
+                    
+                    <div class="article-text">
+                        <p class="lead">Lever des fonds est souvent une étape cruciale dans le développement d'une startup. Cependant, le processus peut sembler intimidant, surtout pour les entrepreneurs qui s'y aventurent pour la première fois.</p>
+                        
+                        <p>Dans cet article, nous allons explorer les stratégies les plus efficaces pour attirer des investisseurs et sécuriser le financement dont votre startup a besoin pour se développer en 2023.</p>
+                        
+                        <h3>1. Préparez un pitch deck convaincant</h3>
+                        
+                        <p>Votre pitch deck est souvent la première impression que vous donnez aux investisseurs potentiels. Il doit être clair, concis et convaincant. Voici les éléments essentiels à inclure :</p>
+                        
+                        <ul>
+                            <li>Une présentation claire du problème que vous résolvez</li>
+                            <li>Votre solution unique et sa proposition de valeur</li>
+                            <li>Une analyse du marché et de sa taille</li>
+                            <li>Votre modèle économique et vos projections financières</li>
+                            <li>Une présentation de votre équipe et de ses compétences</li>
+                            <li>Votre stratégie de croissance et vos objectifs</li>
+                        </ul>
+                        
+                        <blockquote>
+                            "Un bon pitch deck ne raconte pas seulement ce que fait votre entreprise, il raconte pourquoi elle existe et pourquoi elle va réussir."
+                        </blockquote>
+                        
+                        <h3>2. Identifiez les bons investisseurs</h3>
+                        
+                        <p>Tous les investisseurs ne sont pas égaux. Certains se spécialisent dans des secteurs spécifiques ou des stades de développement particuliers. Faites vos recherches pour identifier ceux qui correspondent le mieux à votre startup :</p>
+                        
+                        <p>Les business angels sont souvent d'anciens entrepreneurs qui peuvent apporter non seulement des fonds, mais aussi leur expertise et leur réseau. Ils investissent généralement entre 10 000 € et 500 000 €.</p>
+                        
+                        <p>Les fonds de capital-risque (VC) investissent des montants plus importants, généralement à partir de 500 000 €, mais ont aussi des attentes plus élevées en termes de croissance et de retour sur investissement.</p>
+                    </div>
+                    
+                    <div class="article-comments">
+                        <h3>Commentaires (24)</h3>
+                        
+                        <div class="comment-form">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Your profile">
+                            <div class="form-input">
+                                <textarea placeholder="Ajouter un commentaire..."></textarea>
+                                <button class="btn-primary">Publier</button>
+                            </div>
+                        </div>
+                        
+                        <div class="comments-list">
+                            <div class="comment">
+                                <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Commenter">
+                                <div class="comment-content">
+                                    <div class="comment-header">
+                                        <span class="name">Alexandre Dupont</span>
+                                        <span class="date">Il y a 2 jours</span>
+                                    </div>
+                                    <p>Excellent article ! J'ai récemment levé des fonds pour ma startup et je confirme que la préparation du pitch deck est cruciale. J'ajouterais qu'il est important de s'entraîner à présenter oralement, car même le meilleur pitch deck ne peut compenser une présentation médiocre.</p>
+                                    <div class="comment-actions">
+                                        <button><i class="fa-regular fa-thumbs-up"></i> 12</button>
+                                        <button><i class="fa-regular fa-comment"></i> Répondre</button>
+                                    </div>
+                                    
+                                    <div class="comment-replies">
+                                        <div class="comment">
+                                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Author">
+                                            <div class="comment-content">
+                                                <div class="comment-header">
+                                                    <span class="name">Sophie Martin</span>
+                                                    <span class="author-badge">Auteur</span>
+                                                    <span class="date">Il y a 1 jour</span>
+                                                </div>
+                                                <p>Merci Alexandre ! Vous avez tout à fait raison concernant l'importance de la présentation orale. Je prévois d'écrire un article complémentaire sur ce sujet prochainement.</p>
+                                                <div class="comment-actions">
+                                                    <button><i class="fa-regular fa-thumbs-up"></i> 5</button>
+                                                    <button><i class="fa-regular fa-comment"></i> Répondre</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="comment">
+                                <img src="https://randomuser.me/api/portraits/women/63.jpg" alt="Commenter">
+                                <div class="comment-content">
+                                    <div class="comment-header">
+                                        <span class="name">Émilie Laurent</span>
+                                        <span class="date">Il y a 3 jours</span>
+                                    </div>
+                                    <p>Pourriez-vous développer davantage sur les différences entre lever des fonds auprès de business angels et de fonds de capital-risque ? J'hésite entre les deux pour ma startup en phase de démarrage.</p>
+                                    <div class="comment-actions">
+                                        <button><i class="fa-regular fa-thumbs-up"></i> 8</button>
+                                        <button><i class="fa-regular fa-comment"></i> Répondre</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button class="load-more">Voir plus de commentaires</button>
+                    </div>
+                </div>
+                
+                <div class="related-articles">
+                    <h3>Articles similaires</h3>
+                    <div class="articles-grid">
+                        <article class="article-card">
+                            <div class="article-image">
+                                <img src="https://images.unsplash.com/photo-1579532537598-459ecdaf39cc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="Article image">
+                                <span class="category">Finance</span>
+                            </div>
+                            <div class="article-content">
+                                <h4>Comment valoriser votre startup avant une levée de fonds</h4>
+                                <div class="article-meta">
+                                    <div class="author">
+                                        <img src="https://randomuser.me/api/portraits/men/42.jpg" alt="Author">
+                                        <span>Pierre Durand</span>
+                                    </div>
+                                    <div class="stats">
+                                        <span><i class="fa-regular fa-eye"></i> 945</span>
+                                        <span><i class="fa-regular fa-comment"></i> 15</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        
+                        <article class="article-card">
+                            <div class="article-image">
+                                <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="Article image">
+                                <span class="category">Stratégie</span>
+                            </div>
+                            <div class="article-content">
+                                <h4>Les alternatives au capital-risque pour financer votre entreprise</h4>
+                                <div class="article-meta">
+                                    <div class="author">
+                                        <img src="https://randomuser.me/api/portraits/women/22.jpg" alt="Author">
+                                        <span>Julie Leroy</span>
+                                    </div>
+                                    <div class="stats">
+                                        <span><i class="fa-regular fa-eye"></i> 723</span>
+                                        <span><i class="fa-regular fa-comment"></i> 8</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fa-solid fa-lightbulb"></i>
+                    <h2>EntrepreneuHub</h2>
+                    <p>La plateforme de partage de connaissances pour entrepreneurs</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Navigation</h4>
+                        <ul>
+                            <li><a href="#">Accueil</a></li>
+                            <li><a href="#">Articles</a></li>
+                            <li><a href="#">Catégories</a></li>
+                            <li><a href="#">À propos</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Catégories</h4>
+                        <ul>
+                            <li><a href="#">Stratégie</a></li>
+                            <li><a href="#">Marketing</a></li>
+                            <li><a href="#">Finance</a></li>
+                            <li><a href="#">Leadership</a></li>
+                            <li><a href="#">Innovation</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Légal</h4>
+                        <ul>
+                            <li><a href="#">Conditions d'utilisation</a></li>
+                            <li><a href="#">Politique de confidentialité</a></li>
+                            <li><a href="#">Mentions légales</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-newsletter">
+                    <h4>Restez informé</h4>
+                    <p>Inscrivez-vous à notre newsletter pour recevoir les derniers articles et conseils</p>
+                    <div class="newsletter-form">
+                        <input type="email" placeholder="Votre email">
+                        <button class="btn-primary">S'inscrire</button>
+                    </div>
+                    <div class="social-links">
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 EntrepreneuHub. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
