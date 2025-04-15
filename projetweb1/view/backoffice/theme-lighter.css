@@ -1,0 +1,107 @@
+:root {
+    /* Couleurs de fond légèrement plus claires */
+    --color-bg-primary: #121620;    /* Légèrement plus clair que le noir pur */
+    --color-bg-secondary: #1a202c;  /* Gris très foncé avec une teinte bleue */
+    --color-bg-tertiary: #242c3d;   /* Gris foncé avec une teinte bleue */
+    
+    /* Couleurs de texte légèrement plus claires */
+    --color-text-primary: #f0f4f8;  /* Blanc cassé */
+    --color-text-secondary: #cbd5e0; /* Gris clair */
+    --color-text-tertiary: #a0aec0;  /* Gris moyen */
+    
+    /* Couleurs d'accent plus vives */
+    --color-accent-primary: #60a5fa;   /* Bleu plus vif */
+    --color-accent-secondary: #3b82f6;  /* Bleu moyen */
+    --color-accent-tertiary: #2563eb;   /* Bleu foncé */
+    
+    /* Couleurs de bordure légèrement plus visibles */
+    --color-border-primary: #2d3748;    /* Gris foncé */
+    --color-border-secondary: #4a5568;  /* Gris moyen */
+    
+    /* Couleurs de succès/erreur */
+    --color-success: #34d399;  /* Vert plus vif */
+    --color-error: #f87171;    /* Rouge plus vif */
+    
+    /* Couleurs pour les événements du calendrier */
+    --color-workshop: #34d399;      /* Vert */
+    --color-conference: #60a5fa;    /* Bleu */
+    --color-networking: #fbbf24;    /* Jaune */
+    --color-training: #a78bfa;      /* Violet */
+    --color-competition: #f87171;   /* Rouge */
+  }
+  
+  /* Ajustement des couleurs pour les cartes d'événements */
+  .event-card, .featured-event-card, .past-event-card {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Amélioration du contraste pour les badges */
+  .event-badge {
+    background-color: var(--color-accent-secondary);
+    color: white;
+    font-weight: 600;
+  }
+  
+  /* Amélioration de la lisibilité des tags */
+  .event-tag {
+    background-color: rgba(96, 165, 250, 0.15);
+    color: var(--color-accent-primary);
+  }
+  
+  /* Ajustement des couleurs du calendrier */
+  .calendar-event.workshop {
+    background-color: rgba(52, 211, 153, 0.2);
+    color: #34d399;
+  }
+  
+  .calendar-event.conference {
+    background-color: rgba(96, 165, 250, 0.2);
+    color: #60a5fa;
+  }
+  
+  .calendar-event.networking {
+    background-color: rgba(251, 191, 36, 0.2);
+    color: #fbbf24;
+  }
+  
+  .calendar-event.training {
+    background-color: rgba(167, 139, 250, 0.2);
+    color: #a78bfa;
+  }
+  
+  .calendar-event.competition {
+    background-color: rgba(248, 113, 113, 0.2);
+    color: #f87171;
+  }
+  
+  /* Ajustement des couleurs de la légende du calendrier */
+  .legend-color.workshop {
+    background-color: #34d399;
+  }
+  
+  .legend-color.conference {
+    background-color: #60a5fa;
+  }
+  
+  .legend-color.networking {
+    background-color: #fbbf24;
+  }
+  
+  .legend-color.training {
+    background-color: #a78bfa;
+  }
+  
+  .legend-color.competition {
+    background-color: #f87171;
+  }
+  
+  /* Amélioration des effets de survol */
+  .btn:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+  }
+  
+  /* Amélioration des effets de transition */
+  .event-card:hover, .featured-event-card:hover, .past-event-card:hover {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  }
