@@ -21,7 +21,7 @@ class Config
                         PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
                     ]
                 );
-                echo"success";
+                //echo"success";
             } catch (Exception $e) {
                 die('Erreur: ' . $e->getMessage());
             }

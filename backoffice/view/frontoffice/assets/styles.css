@@ -902,3 +902,73 @@ footer {
         justify-content: space-between;
     }
 }
+.comment {
+    position: relative;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background-color: var(--color-foreground);
+}
+
+.comment-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.comment-actions {
+    margin-left: auto;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.btn-modify, .btn-delete, .btn-report {
+    background: none;
+    border: none;
+    color: var(--color-text-secondary);
+    cursor: pointer;
+    padding: 0.25rem 0.5rem;
+    transition: all 0.2s;
+    border-radius: var(--radius);
+}
+
+.btn-modify:hover {
+    color: var(--color-primary);
+    background: rgba(76, 175, 80, 0.1);
+}
+
+.btn-delete:hover {
+    color: var(--color-danger);
+    background: rgba(244, 67, 54, 0.1);
+}
+
+.btn-report:hover {
+    color: #ff9800;
+    background: rgba(255, 152, 0, 0.1);
+}
+.btn-like {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    color: var(--color-text-secondary);
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 15px;
+    transition: all 0.2s;
+}
+
+.btn-like:hover {
+    color: #e74c3c;
+    background: rgba(231, 76, 60, 0.1);
+}
+
+.btn-like.liked {
+    color: #e74c3c;
+}
+
+.btn-like .like-count {
+    font-size: 0.9em;
+}

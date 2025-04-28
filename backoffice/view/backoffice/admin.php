@@ -1,147 +1,122 @@
 <?php
+// admin.php
 include("../../controller/articlecontroller.php");
-$article = new articlecontroller();
-$list = $article->afficher();
+// En haut du fichier
+require_once '../../controller/commentairecontroller.php';
+$commentController = new CommentaireController();
+$comments = $commentController->getAllComments();
+$unreadCommentsCount = $commentController->getUnreadCommentsCount();
 
-// Fonctions de validation
-function isValidName($name)
-{
-  return !preg_match('/[0-9]/', $name);
-}
-
-function isValidDate($date)
-{
-  $today = new DateTime('now');
-  $inputDate = DateTime::createFromFormat('Y-m-d', $date);
-  return $inputDate && $inputDate >= $today;
-}
-
-// Traitement des requêtes
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-  if (isset($_POST['update'])) {
-    // Validation modification
-    if (!isValidName($_POST['nom_article'])) {
-      header("Location: admin.php?error=invalid_name");
+  if (ob_get_level()) {
+    ob_end_clean();
+  }
+  header('Content-Type: application/json');
+
+
+  $articleController = new articlecontroller();
+
+
+  try {
+    // --- MISE À JOUR ---
+    if (isset($_POST['update'])) {
+      $existingArticle = $articleController->getArticleById($_POST['id']);
+      // Gestion d'image pour modification
+      $imagePath = null;
+      if (isset($_FILES['image']) && $_FILES['image']['error'] === UPLOAD_ERR_OK) {
+        $uploadDir = __DIR__ . '/uploads/';
+        if (!is_dir($uploadDir)) {
+          mkdir($uploadDir, 0777, true);
+        }
+        $imageName = basename($_FILES['image']['name']);
+        $imagePath = $uploadDir . time() . "_" . $imageName;
+        move_uploaded_file($_FILES['image']['tmp_name'], $imagePath);
+      } elseif (isset($_POST['existingImage'])) {
+        $imagePath = $_POST['existingImage']; // garder ancienne image
+      }
+
+      $updatedArticle = new article(
+        $_POST['id'],
+        htmlspecialchars($_POST['nom_article']),
+        $_POST['date_soumission'],
+        htmlspecialchars($_POST['categorie']),
+        htmlspecialchars($_POST['contenu']),
+        $imagePath,
+        $existingArticle->getViews(),  // Preserve existing views
+        $existingArticle->getLikes(),
+
+      );
+
+      $ok = $articleController->modification($updatedArticle);
+      echo json_encode([
+        'success' => $ok,
+        'message' => $ok ? 'Article mis à jour avec succès.' : 'Échec de la mise à jour.'
+      ]);
       exit();
     }
 
-    if (!isValidDate($_POST['date_soumission'])) {
-      header("Location: admin.php?error=invalid_date");
-      exit();
+    // --- AJOUT ---
+    $imagePath = null;
+    if (!empty($_FILES['image']['name']) && $_FILES['image']['error'] === UPLOAD_ERR_OK) {
+      $uploadDir = __DIR__ . '/uploads/';
+      if (!is_dir($uploadDir)) {
+        mkdir($uploadDir, 0755, true);
+      }
+      $imageName = basename($_FILES['image']['name']);
+      $targetPath = $uploadDir . $imageName;
+      if (move_uploaded_file($_FILES['image']['tmp_name'], $targetPath)) {
+        $imagePath = '/uploads/' . $imageName;
+      } else {
+        echo json_encode([
+          'success' => false,
+          'message' => "Échec du téléchargement de l'image."
+        ]);
+        exit();
+      }
     }
 
-    // Mise à jour de l'article
-    $updatedArticle = new article(
-      $_POST['id'],
-      htmlspecialchars($_POST['nom_article']),
-      $_POST['date_soumission'],
-      htmlspecialchars($_POST['categorie'])
-    );
-
-    if ($article->modification($updatedArticle)) {
-      header("Location: admin.php?message=updated");
-    } else {
-      header("Location: admin.php?error=update_failed");
-    }
-    exit();
-  } else {
-    // Validation ajout
-    if (!isValidName($_POST['articlenom'])) {
-      header("Location: admin.php?error=invalid_name");
-      exit();
-    }
-
-    if (!isValidDate($_POST['datesoumission'])) {
-      header("Location: admin.php?error=invalid_date");
-      exit();
-    }
-
-    // Ajout du nouvel article
     $newArticle = new article(
       null,
       htmlspecialchars($_POST['articlenom']),
       $_POST['datesoumission'],
-      htmlspecialchars($_POST['categoriearticle'])
+      htmlspecialchars($_POST['categoriearticle']),
+      htmlspecialchars($_POST['contenu']),
+      $imagePath,
+      0, // views
+      0  // likes
     );
 
-    if ($article->ajout($newArticle)) {
-      header("Location: admin.php?message=added");
-    } else {
-      header("Location: admin.php?error=add_failed");
-    }
-    exit();
+    $ok = $articleController->ajout($newArticle);
+    echo json_encode([
+      'success' => $ok,
+      'message' => $ok ? 'Article ajouté avec succès.' : "Échec de l'ajout de l'article."
+    ]);
+  } catch (Exception $e) {
+    echo json_encode([
+      'success' => false,
+      'message' => 'Erreur interne : ' . $e->getMessage()
+    ]);
   }
+
+  exit();
 }
 
-// Gestion de la suppression
+// 2) Sinon (GET), on inclut le controller et on affiche la page HTML
+
+$articleController = new articlecontroller();
+$list = $articleController->afficher();
 if (isset($_GET['id'])) {
   $id = intval($_GET['id']);
-  if ($article->supp($id)) {
+  if ($articleController->supp($id)) {
     header("Location: admin.php?message=deleted");
   } else {
     header("Location: admin.php?error=delete_failed");
   }
   exit();
 }
+
+
 ?>
-<!-- Ajoutez cette section en haut de votre admin.php -->
-<div class="alert-container">
-  <?php if (isset($_GET['message'])): ?>
-    <div class="alert alert-success">
-      <?php
-      switch ($_GET['message']) {
-        case 'added':
-          echo "✅ Article ajouté avec succès !";
-          break;
-        case 'updated':
-          echo "✅ Article modifié avec succès !";
-          break;
-        case 'deleted':
-          echo "✅ Article supprimé avec succès !";
-          break;
-        default:
-          echo "Opération réussie !";
-      }
-      ?>
-    </div>
-  <?php endif; ?>
-
-  <?php if (isset($_GET['error'])): ?>
-    <div class="alert alert-danger">
-      <?php
-      switch ($_GET['error']) {
-        case 'invalid_name':
-          echo "❌ Le nom ne doit pas contenir de chiffres !";
-          break;
-        case 'invalid_date':
-          echo "❌ La date doit être aujourd'hui ou ultérieure !";
-          break;
-        case 'missing_fields':
-          echo "❌ Tous les champs sont obligatoires !";
-          break;
-        case 'add_failed':
-          echo "❌ Échec de l'ajout de l'article !";
-          break;
-        case 'update_failed':
-          echo "❌ Échec de la mise à jour !";
-          break;
-        case 'delete_failed':
-          echo "❌ Échec de la suppression !";
-          break;
-        default:
-          echo "Une erreur est survenue !";
-      }
-      ?>
-    </div>
-  <?php endif; ?>
-</div>
-
-
-
-
-
-
-
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -273,7 +248,7 @@ if (isset($_GET['id'])) {
             </a>
           </li>
           <li class="nav-item">
-            <a href="#messages">
+            <a href="#comments">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
@@ -284,11 +259,10 @@ if (isset($_GET['id'])) {
                 stroke-width="2"
                 stroke-linecap="round"
                 stroke-linejoin="round">
-                <path
-                  d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
               </svg>
-              <span>Messages</span>
-              <span class="notification-badge">5</span>
+              <span>Commentaires</span>
+              <span class="notification-badge"><?= $unreadCommentsCount ?></span>
             </a>
           </li>
         </ul>
@@ -456,7 +430,7 @@ if (isset($_GET['id'])) {
       </header>
 
       <!-- Dashboard Content -->
-      <div class="admin-content">
+      <div class="admin-content" id="articlesDashboard">
         <div class="dashboard-header">
           <h1>Tableau de bord</h1>
           <div class="category-filter">
@@ -756,119 +730,92 @@ if (isset($_GET['id'])) {
         <!-- Recent Articles Table -->
         <div class="table-section">
           <div class="table-header">
-            <!-- <div class="add-article-form-container" style="display: none;">
-
-              <h3>Ajouter un article</h3>
-              <form action="admin.php" method="POST" id="addArticleForm">
-                <input type="hidden" id="articlenom" name="articlenom" />
-                <input type="hidden" id="datesoumission" name="datesoumission" />
-                <input type="hidden" id="categoriearticle" name="categoriearticle" />
-                <button type="submit" class="btn btn-primary" name="confirm">Enregistrer</button>
-              </form>
-            </div> -->
             <h2>Articles récents</h2>
             <button class="btn btn-primary" id="addArticleBtn">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <line x1="12" y1="5" x2="12" y2="19"></line>
                 <line x1="5" y1="12" x2="19" y2="12"></line>
               </svg>
               Ajouter un article
             </button>
           </div>
+
           <div class="table-container">
             <table class="admin-table" id="articlesTable">
               <thead>
-
                 <tr>
                   <th>ID Article</th>
                   <th>Nom de l'article</th>
                   <th>Date de soumission</th>
                   <th>Catégorie</th>
+                  <th>Contenu</th>
+                  <th>Image</th>
+                  <th>views</th>
+                  <th>Likes</th>
                   <th>Actions</th>
                 </tr>
               </thead>
               <tbody>
-                <?php
-                foreach ($list as $artic) {
-                ?>
+                <?php foreach ($list as $artic): ?>
                   <tr>
-                    <td><?= $artic['ID_Article']; ?></td>
+                    <td><?= htmlspecialchars($artic['ID_Article']); ?></td>
                     <td>
                       <div class="article-cell">
-                        <span><?= $artic['nom_article']; ?></span>
+                        <span><?= htmlspecialchars($artic['nom_article']); ?></span>
                       </div>
                     </td>
-                    <td><?= $artic['Date_de_soumission']; ?></span>
+                    <td><?= htmlspecialchars($artic['Date_de_soumission']); ?></td>
+                    <td>
+                      <span class="table-badge technologie">
+                        <?= htmlspecialchars($artic['Catégorie']); ?>
+                      </span>
+                    </td>
+                    <td>
+                      <div class="article-cell">
+                        <?= nl2br(htmlspecialchars($artic['contenu'])); ?>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="article-cell">
+                        <?php if (!empty($artic['image'])): ?>
+                          <img src="uploads/<?= htmlspecialchars(basename($artic['image'])) ?>"
+                            alt="Visuel de <?= htmlspecialchars($artic['nom_article']) ?>"
+                            style="max-width:100px; height:auto;">
+                        <?php endif; ?>
+                      </div>
+                    </td>
+                    <td class="article-cell">
+                      <?= htmlspecialchars($artic['views']); ?>
+                    </td>
+                    <td class="article-cell">
+                      <?= htmlspecialchars($artic['likes']); ?>
+                    </td>
+                    <td>
+                      <div class="table-actions">
+                        <button type="button" class="action-icon modify-btn" title="Modifier">
+                          <!-- pencil/edit icon -->
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                            <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                          </svg>
+                        </button>
+                        <a class="action-icon" href="admin.php?id=<?= $artic['ID_Article']; ?>" title="Supprimer">
+                          <!-- trash/delete icon -->
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="3 6 5 6 21 6"></polyline>
+                            <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                          </svg>
+                        </a>
+                      </div>
+                    </td>
+                  </tr>
+                <?php endforeach; ?>
+              </tbody>
+            </table>
           </div>
-          </td>
-          <td>
-            <span class="table-badge technologie"><?= $artic['Catégorie']; ?></span>
-          </td>
-          <td>
-            <div class="table-actions">
-              <button type="button" class="action-icon modify-btn">
-
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round">
-                  <path
-                    d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
-                  <path
-                    d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
-                </svg>
-              </button>
-              <a class="action-icon" href="admin.php?id=<?= $artic['ID_Article']; ?>">
-                <button class="action-icon">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round">
-                    <polyline points="3 6 5 6 21 6"></polyline>
-                    <path
-                      d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
-                  </svg>
-              </a>
-              </button>
-            </div>
-          </td>
-          </tr>
-          <tr>
-          <?php
-
-                }
-          ?>
-
-
-
-
-
-
-
-
-          </tbody>
-          </table>
         </div>
         <div class="table-footer">
           <div class="pagination">
@@ -910,11 +857,91 @@ if (isset($_GET['id'])) {
         </div>
       </div>
   </div>
+  <!-- Comments Section -->
+  <div class="admin-content" id="commentsDashboard" style="display: none;">
+    <div class="dashboard-header">
+      <h1>Gestion des commentaires</h1>
+      <div class="category-filter">
+        <select id="categoryFilter" class="btn btn-secondary">
+          <option value="all">Tous les articles</option>
+          <?php foreach ($articles as $article): ?>
+            <option value="<?= htmlspecialchars($article['ID_Article']); ?>">
+              <?= htmlspecialchars($article['nom_article']); ?>
+            </option>
+          <?php endforeach; ?>
+        </select>
+      </div>
+    </div>
+    <div class="table-header">
+      <h2>Commentaires récents</h2>
+      <button class="btn btn-primary" id="addCommentBtn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="12" y1="5" x2="12" y2="19"></line>
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+        </svg>
+        Ajouter un commentaire
+      </button>
+      <div class="table-section" id="commentsSection">
+        <div class="table-header">
+          <h2>Gestion des commentaires</h2>
+          <div class="filter-options">
+            <select id="commentFilter" class="btn btn-secondary">
+              <option value="all">Tous les commentaires</option>
+              <option value="reported">Signalés</option>
+              <option value="pending">En attente</option>
+              <option value="approved">Approuvés</option>
+            </select>
+          </div>
+        </div>
 
-  </main>
-  </div>
+        <div class="table-container">
+          <table class="admin-table" id="commentsTable">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Auteur</th>
+                <th>Contenu</th>
+                <th>Article</th>
+                <th>Date</th>
+                <th>Statut</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <?php foreach ($comments as $comment): ?>
+                <tr data-status="<?= strtolower($comment->getStatus()) ?>">
+                  <td><?= $comment->getId() ?></td>
+                  <td><?= htmlspecialchars($comment->getAuteur()) ?></td>
+                  <td class="comment-content"><?= nl2br(htmlspecialchars($comment->getContenu())) ?></td>
+                  <td><?= htmlspecialchars($comment->getArticleTitle()) ?></td>
+                  <td><?= $comment->getDatePublication()->format('d/m/Y H:i') ?></td>
+                  <td>
+                    <span class="table-badge status-<?= strtolower($comment->getStatus()) ?>">
+                      <?= $comment->getStatus() ?>
+                    </span>
+                  </td>
+                  <td>
+                    <div class="table-actions">
+                      <button class="action-icon approve-btn" title="Approuver">
+                        <svg><!-- Icône check --></svg>
+                      </button>
+                      <button class="action-icon delete-btn" title="Supprimer">
+                        <svg><!-- Icône poubelle --></svg>
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+              <?php endforeach; ?>
+            </tbody>
+          </table>
+        </div>
+      </div>
 
-  <script src="admin.js"></script>
+      </main>
+    </div>
+
+    <script src="admin.js"></script>
 </body>
 
 </html>

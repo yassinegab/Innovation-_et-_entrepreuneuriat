@@ -648,22 +648,23 @@
   
   .table-actions {
     display: flex;
-    gap: 0.5rem;
+    gap: 8px; /* Adds spacing between buttons */
+    justify-content: center; /* Optional: centers the buttons horizontally */
   }
   
+  /* Optional: Style the buttons for better appearance */
   .action-icon {
-    background: none;
     border: none;
-    color: var(--color-text-tertiary);
+    background: none;
     cursor: pointer;
-    padding: 0.25rem;
-    border-radius: var(--radius-sm);
+    padding: 4px;
+    font-size: 1.2em;
   }
   
   .action-icon:hover {
-    color: var(--color-text-primary);
-    background-color: rgba(255, 255, 255, 0.05);
+    opacity: 0.7;
   }
+  
   
   .table-footer {
     display: flex;
