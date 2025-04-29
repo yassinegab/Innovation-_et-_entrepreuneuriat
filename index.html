@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plateforme de Consultation</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>   
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="https://via.placeholder.com/40" alt="Logo" class="logo">
+                <h2>ConsultPro</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="active"><a href="#"><i class="fas fa-home"></i> Tableau de bord</a></li>
+                    <li><a href="#"><i class="fas fa-comments"></i> Consultations</a></li>
+                    <li><a href="#"><i class="fas fa-user-tie"></i> Conseillers</a></li>
+                    <li><a href="#"><i class="fas fa-chart-line"></i> Statistiques</a></li>
+                    <li><a href="#"><i class="fas fa-cog"></i> Paramètres</a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="user-info">
+                    <img src="https://via.placeholder.com/32" alt="User" class="user-avatar">
+                    <span>Yassine</span>
+                </div>
+                <a href="#" class="logout"><i class="fas fa-sign-out-alt"></i></a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="main-header">
+                <div class="search-container">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Rechercher...">
+                </div>
+                <div class="header-actions">
+                    <button class="notification-btn">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-badge">2</span>
+                    </button>
+                    <button class="new-consultation-btn">
+                        <i class="fas fa-plus"></i> Nouvelle consultation
+                    </button>
+                </div>
+            </header>
+
+            <div class="content-wrapper">
+                <div class="page-header">
+                    <h1>Gestion des Consultations</h1>
+                    <div class="filters">
+                        <select id="status-filter">
+                            <option value="all">Tous les statuts</option>
+                            <option value="pending">En attente</option>
+                            <option value="in-progress">En cours</option>
+                            <option value="completed">Terminées</option>
+                        </select>
+                        <select id="type-filter">
+                            <option value="all">Tous les types</option>
+                            <option value="financing">Financement</option>
+                            <option value="legal">Juridique</option>
+                            <option value="marketing">Marketing</option>
+                            <option value="technical">Technique</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="consultations-list">
+                    <div class="consultation-card" data-id="12">
+                        <div class="card-header">
+                            <div class="consultation-info">
+                                <h3>Aide pour obtenir un financement</h3>
+                                <span class="consultation-type">Financement</span>
+                                <span class="consultation-status completed">Terminée</span>
+                            </div>
+                            <div class="consultation-date">
+                                <i class="far fa-calendar-alt"></i> 15 avril 2023
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p>J'ai une idée de startup dans l'agriculture durable et je cherche des moyens de financement en Tunisie.</p>
+                        </div>
+                        <div class="card-footer">
+                            <div class="consultant-info">
+                                <img src="https://via.placeholder.com/24" alt="Consultant" class="consultant-avatar">
+                                <span>Mme. Hela</span>
+                            </div>
+                            <button class="view-details-btn">Voir détails</button>
+                        </div>
+                    </div>
+
+                    <div class="consultation-card" data-id="13">
+                        <div class="card-header">
+                            <div class="consultation-info">
+                                <h3>Questions juridiques sur la création d'entreprise</h3>
+                                <span class="consultation-type">Juridique</span>
+                                <span class="consultation-status pending">En attente</span>
+                            </div>
+                            <div class="consultation-date">
+                                <i class="far fa-calendar-alt"></i> 18 avril 2023
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p>Je souhaite créer une SARL et j'ai des questions concernant les démarches administratives.</p>
+                        </div>
+                        <div class="card-footer">
+                            <div class="consultant-info">
+                                <img src="https://via.placeholder.com/24" alt="Consultant" class="consultant-avatar">
+                                <span>Non assigné</span>
+                            </div>
+                            <button class="view-details-btn">Voir détails</button>
+                        </div>
+                    </div>
+
+                    <div class="consultation-card" data-id="14">
+                        <div class="card-header">
+                            <div class="consultation-info">
+                                <h3>Stratégie marketing pour lancement de produit</h3>
+                                <span class="consultation-type">Marketing</span>
+                                <span class="consultation-status in-progress">En cours</span>
+                            </div>
+                            <div class="consultation-date">
+                                <i class="far fa-calendar-alt"></i> 20 avril 2023
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p>Je prépare le lancement d'un nouveau produit et j'ai besoin de conseils sur la stratégie marketing à adopter.</p>
+                        </div>
+                        <div class="card-footer">
+                            <div class="consultant-info">
+                                <img src="https://via.placeholder.com/24" alt="Consultant" class="consultant-avatar">
+                                <span>M. Ahmed</span>
+                            </div>
+                            <button class="view-details-btn">Voir détails</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Consultation Detail Modal -->
+            <div id="consultation-modal" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2>Détails de la consultation</h2>
+                        <button class="close-modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="consultation-details">
+                            <div class="detail-section">
+                                <h3>Aide pour obtenir un financement</h3>
+                                <div class="meta-info">
+                                    <span class="consultation-type">Financement</span>
+                                    <span class="consultation-status completed">Terminée</span>
+                                    <span class="consultation-date"><i class="far fa-calendar-alt"></i> 15 avril 2023</span>
+                                </div>
+                                <div class="detail-content">
+                                    <h4>Description</h4>
+                                    <p>J'ai une idée de startup dans l'agriculture durable et je cherche des moyens de financement en Tunisie.</p>
+                                </div>
+                            </div>
+
+                            <div class="response-section">
+                                <div class="response-header">
+                                    <div class="consultant-info">
+                                        <img src="https://via.placeholder.com/32" alt="Consultant" class="consultant-avatar">
+                                        <div>
+                                            <h4>Mme. Hela</h4>
+                                            <span class="response-date">Répondu le 16 avril 2023</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="response-content">
+                                    <p>Bonjour Yassine,</p>
+                                    <p>Il existe plusieurs programmes nationaux et internationaux pour financer ce type de projet. Voici une liste avec les conditions :</p>
+                                    <ul>
+                                        <li><strong>Programme National d'Appui aux Startups :</strong> Financement jusqu'à 50 000 DT pour les projets innovants dans l'agriculture durable.</li>
+                                        <li><strong>Fonds de Développement Agricole :</strong> Subventions pouvant atteindre 30% du coût total du projet.</li>
+                                        <li><strong>Banque Tunisienne de Solidarité :</strong> Prêts à taux préférentiels pour les jeunes entrepreneurs.</li>
+                                        <li><strong>Programmes internationaux :</strong> PNUD, FAO et Union Européenne offrent des financements spécifiques pour l'agriculture durable.</li>
+                                    </ul>
+                                    <p>Je vous propose de prendre rendez-vous pour discuter plus en détail de votre projet et identifier les meilleures options de financement.</p>
+                                    <p>Cordialement,<br>Hela</p>
+                                </div>
+                            </div>
+
+                            <div class="feedback-section">
+                                <h4>Évaluation</h4>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <p class="feedback-comment">Très bons conseils, merci beaucoup !</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="secondary-btn">Fermer</button>
+                        <button class="primary-btn">Nouvelle question</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- New Consultation Modal -->
+            <div id="new-consultation-modal" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2>Nouvelle consultation</h2>
+                        <button class="close-modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="consultation-form">
+                            <div class="form-group">
+                                <label for="consultation-subject">Sujet</label>
+                                <input type="text" id="consultation-subject" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="consultation-type">Type</label>
+                                <select id="consultation-type" required>
+                                    <option value="">Sélectionnez un type</option>
+                                    <option value="financing">Financement</option>
+                                    <option value="legal">Juridique</option>
+                                    <option value="marketing">Marketing</option>
+                                    <option value="technical">Technique</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="consultation-description">Description</label>
+                                <textarea id="consultation-description" rows="5" required></textarea>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="secondary-btn">Annuler</button>
+                        <button class="primary-btn" type="submit" form="consultation-form">Soumettre</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Notification Panel -->
+    <div class="notification-panel">
+        <div class="notification-header">
+            <h3>Notifications</h3>
+            <button class="mark-all-read">Tout marquer comme lu</button>
+        </div>
+        <div class="notification-list">
+            <div class="notification-item unread">
+                <div class="notification-icon">
+                    <i class="fas fa-comment-dots"></i>
+                </div>
+                <div class="notification-content">
+                    <p>Vous avez reçu une réponse à votre consultation !</p>
+                    <span class="notification-time">Il y a 2 heures</span>
+                </div>
+            </div>
+            <div class="notification-item unread">
+                <div class="notification-icon">
+                    <i class="fas fa-user-plus"></i>
+                </div>
+                <div class="notification-content">
+                    <p>Mme. Hela a été assignée à votre consultation.</p>
+                    <span class="notification-time">Il y a 1 jour</span>
+                </div>
+            </div>
+            <div class="notification-item">
+                <div class="notification-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <div class="notification-content">
+                    <p>Votre consultation a été créée avec succès.</p>
+                    <span class="notification-time">Il y a 2 jours</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="overlay"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
