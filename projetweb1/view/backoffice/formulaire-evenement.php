@@ -229,23 +229,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <form id="event-form" action="formulaire-evenement.php" method="POST" onsubmit="return validateForm()">
                 <div class="form-group">
                     <label for="event-id">ID Événement</label>
-                    <input type="text" id="event-id" name="id" placeholder="Entrez l'ID de l'événement" required>
+                    <input type="text" id="event-id" name="id" placeholder="Entrez l'ID de l'événement" >
                 </div>
                 <div class="form-group">
                     <label for="event-name">Nom</label>
-                    <input type="text" id="nom" name="nom" placeholder="Entrez le nom de l'événement" required>
+                    <input type="text" id="nom" name="nom" placeholder="Entrez le nom de l'événement" >
                 </div>
                 <div class="form-group">
                     <label for="event-date">Date</label>
-                    <input type="date" id="date" name="date" required>
+                    <input type="date" id="date" name="date" >
                 </div>
                 <div class="form-group">
                     <label for="event-location">Lieu</label>
-                    <input type="text" id="lieu" name="lieu" placeholder="Entrez le lieu de l'événement" required>
+                    <input type="text" id="lieu" name="lieu" placeholder="Entrez le lieu de l'événement" >
                 </div>
                 <div class="form-group">
                     <label for="event-capacity">Capacité</label>
-                    <input type="number" id="capacite" name="capacite" min="1" placeholder="Nombre de participants" required>
+                    <input type="number" id="capacite" name="capacite" min="1" placeholder="Nombre de participants" >
                 </div>
                 <button type="submit" name="ajout">Soumettre</button>
             </form>

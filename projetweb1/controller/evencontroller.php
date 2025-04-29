@@ -33,6 +33,23 @@ public function listeven()
     $result = $query->fetchAll();
     return $result ?: []; // Retourne un tableau vide si aucun résultat n'est trouvé
 }
+public function getEventById($id)
+{
+    $db = config::getConnexion();
+    $sql = "SELECT * FROM evenement WHERE id_ev = :id";
+    
+    try {
+        $query = $db->prepare($sql);
+        $query->bindValue(':id', $id, PDO::PARAM_INT);
+        $query->execute();
+        $event = $query->fetch(PDO::FETCH_ASSOC);
+        return $event ?: null; // Retourne null si aucun événement trouvé
+    } catch (Exception $e) {
+        echo "Erreur : " . $e->getMessage();
+        return null;
+    }
+}
+
 
   public function deleteeven($id)
 {
