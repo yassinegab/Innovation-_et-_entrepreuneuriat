@@ -8,6 +8,7 @@ class User {
     private $birthYear = null;
     private $password = null;
     private $email = null;
+    private $role = null;
 
     public function __construct(
         $id,
@@ -91,6 +92,12 @@ class User {
     }
     public function setEmail(?string $email): void {
         $this->email = $email;
+    }
+     public function getRole(): ?int {
+        return $this->role;
+    }
+    public function setRole(?int $role): void {
+        $this->role = $role;
     }
 
 }

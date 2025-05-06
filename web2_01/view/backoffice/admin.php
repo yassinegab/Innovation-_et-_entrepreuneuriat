@@ -11,18 +11,43 @@ if (!isset($_SESSION['user_id'])|| (!($_SESSION['user_id'])==0)) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Administration des Événements</title>
-    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="assets/admin.css">
     <link rel="stylesheet" href="theme-custom.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
 </head>
-<body>
+<body>j
 <header>
     <h1>Gérer les utilisateurs</h1>
     <button id="addUserBtn">+ Ajouter un utilisateur</button>
     <a href="admin_dashboard.php" class="btn-back">← Retour</a>
+    
+    <h1>Gérer les utilisateurs</h1>
+    <button id="addUserBtn">+ Ajouter un utilisateur</button>
+    <a href="admin_dashboard.php" class="btn-back">← Retour</a>
++   <button onclick="window.location.href='statestique.php'" class="btn-stats">📊 Statistiques</button>
+
   </header>
 
   <main>
+    <div class="search-container">
+  <form method="GET" style="display: flex; gap: 10px;">
+  <label for="sortField">Trier par:</label>
+  <select name="sortField" id="sortField">
+    <option value="name">Nom</option>
+    <option value="lastName">Prénom</option>
+    <option value="birthdate">Date de naissance</option>
+    <option value="email">Email</option>
+    <option value="role">role</option>
+  </select>
+  <button type="submit" name="SORTbtn">Trier</button>
+</form>
+  <------
+  <form method="GET" style="display: flex; gap: 10px;">
+    <input type="text" name="userSearch" id="userSearch" placeholder="Search users..." value="<?= isset($_POST['userSearch']) ? htmlspecialchars($_POST['userSearch']) : '' ?>">
+    <button type="submit" name="searchBtn">SEARCH</button>
+  </form>
+</div>
+  
     <table id="usersTable">
       <thead>
         <tr>
@@ -38,7 +63,24 @@ if (!isset($_SESSION['user_id'])|| (!($_SESSION['user_id'])==0)) {
         <?php
         include_once(__DIR__ .'/../../controller/user_controller.php');
         $userC=new User_controller();
-        $users=$userC->getAllUsers() ;
+        $searchName = isset($_GET['userSearch']) ? trim($_GET['userSearch']) : "";
+        $users = $userC->getAllUsers($searchName);
+        if (isset($_GET['SORTbtn']) && isset($_GET['sortField'])) {
+    $field = $_GET['sortField'];
+
+    usort($users, function($a, $b) use ($field) {
+        // If it's a birthdate, use date comparison
+        if ($field === 'birthdate') {
+            return strtotime($a[$field]) - strtotime($b[$field]);
+        }
+        else if ($field === 'role') {
+            return strcmp($a['role'], $b['role']); // Assuming role_name exists
+        }
+
+        // Otherwise, sort alphabetically
+        else {return strcmp($a[$field], $b[$field]);}
+    });
+}
         
         foreach($users as $u): ?>
         <tr>
@@ -47,6 +89,7 @@ if (!isset($_SESSION['user_id'])|| (!($_SESSION['user_id'])==0)) {
           <td><?= htmlspecialchars($u['lastName']) ?></td>
           <td><?= htmlspecialchars($u['email']) ?></td>
           <td><?= htmlspecialchars($u['birthdate']) ?></td>
+          <td><?= htmlspecialchars($u['role']) ?></td>
           <td>
             <!-- Ici tu pourrais ajouter des liens Modifier / Supprimer -->
             <button onclick="window.location.href='edit.php?id=<?= $u['id'] ?>'">✎</button>

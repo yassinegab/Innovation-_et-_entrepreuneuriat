@@ -1,0 +1,39 @@
+body {
+    background-color: #0d0d0d;
+    font-family: Arial, sans-serif;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.profile-box {
+    background-color: #1a1a1a;
+    border-radius: 15px;
+    padding: 40px 30px;
+    width: 360px;
+    box-shadow: 0 0 20px #ffff00;
+}
+
+h1 {
+    text-align: center;
+    color: #ffd700;
+    margin-bottom: 20px;
+}
+
+.profile-info p {
+    margin: 15px 0;
+    font-size: 15px;
+}
+
+.label {
+    font-weight: bold;
+    color: #cccccc;
+}
+
+.logout-link {
+    display: block;
+    margin-top: 25px;
+    text-align: center;

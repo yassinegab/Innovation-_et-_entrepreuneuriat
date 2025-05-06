@@ -37,6 +37,17 @@ class User_controller{
     
 
 }
+
+   /* function load_user2($id) {
+    
+
+    $stmt = $pdo->prepare("SELECT id, name, email, lastName FROM users WHERE id = :id");
+    $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+    $stmt->execute();
+    return $stmt->fetch(PDO::FETCH_ASSOC);
+}*/
+
+
 public function add_user2($user){
     $sql = 'INSERT INTO users (id, name, lastName, password, email, birthdate)
     VALUES (:id, :name, :lastName, :password, :email, :birthdate)';
@@ -100,7 +111,7 @@ public function login_user($user){
             header('Location: ../backoffice/admin.php');
             exit();
             } else {
-            header('Location: welcome_page.php');
+            header('Location: twoFactorAuth.php');
             exit();
 
             }
@@ -109,22 +120,32 @@ public function login_user($user){
             echo 'Erreur BDD : ' . htmlspecialchars($e->getMessage());
         }
     }
-    public function getAllUsers(): array {
-        try {
-            $db = Config::getConnexion();
-            $sql = 'SELECT id, name, lastName, email, birthdate
-                    FROM users
-                    ORDER BY id';
-                        $stmt = $db->query($sql);
-           
-            $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
-            return $users;
-        } catch (PDOException $e) {
-            
-            error_log('Erreur getAllUsers: ' . $e->getMessage());
-            return [];
+public function getAllUsers(string $searchTerm ): array {
+    try {
+        $db = Config::getConnexion();
+        $sql = 'SELECT id, name, lastName, email, birthdate,role FROM users';
+        
+        if (!empty($searchTerm)) {
+            $sql .= ' WHERE name LIKE :search OR lastName LIKE :search OR email LIKE :search';
         }
+        $sql .= ' ORDER BY id';
+        
+        $stmt = $db->prepare($sql);
+        
+        if (!empty($searchTerm)) {
+            $searchParam = '%' . $searchTerm . '%';
+            $stmt->bindValue(':search', $searchParam);
+        }
+        
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    } catch (PDOException $e) {
+        error_log('Erreur getAllUsers: ' . $e->getMessage());
+        return [];
     }
+}
+
+
     function load_user($id) {
     
         $db = Config::getConnexion();
@@ -225,5 +246,97 @@ public function delete_user($id) {
         return false;
     }
 }
+public function checkEmail($email) {
+    $db = config::getConnexion(); 
+    $query = "SELECT COUNT(*) FROM users WHERE email = :email";
+    $stmt = $db->prepare($query); // ← use $db instead of $this->db
+    $stmt->bindParam(":email", $email);
+    $stmt->execute();
+
+    return $stmt->fetchColumn() > 0; // true if exists, false otherwise
+}
+
+public function updatePassword($email, $password) {
+    $db = config::getConnexion(); 
+    $query = "UPDATE users SET password = :password WHERE email = :email";
+    $stmt = $db->prepare($query);
+    $stmt->bindParam(":email", $email);
+    $stmt->bindParam(":password", $password);
+    $stmt->execute();
+}
+
+public function getTotalUsers() {
+    $db = config::getConnexion(); 
+    $query = "SELECT COUNT(*) FROM users";
+    $stmt = $db->prepare($query);
+    $stmt->execute();
+    return $stmt->fetchColumn();
+}
+
+public function getActiveUsers() {
+    $db = config::getConnexion(); 
+    $query = "SELECT COUNT(*) FROM users WHERE active_account = '1'";
+    $stmt = $db->prepare($query);
+    $stmt->execute();
+    return $stmt->fetchColumn();
+}
+
+public function getPendingVerifications() {
+     $db = config::getConnexion(); 
+    $query = "SELECT COUNT(*) FROM users WHERE active_account = 0";
+    $stmt = $db->prepare($query);
+    $stmt->execute();
+    return $stmt->fetchColumn();
+}
+public function getUserGrowthLast30Days() {
+    $db = config::getConnexion(); 
+    $growthData = [];
+    $date = new DateTime();
+    
+    // Initialize all 30 days with 0 counts
+    for ($i = 29; $i >= 0; $i--) {
+        $dateKey = (new DateTime())->modify("-$i days")->format('Y-m-d');
+        $growthData[$dateKey] = 0;
+    }
+    
+    // Query database for actual counts
+    $query = "SELECT DATE(created_at) as date, COUNT(*) as count 
+              FROM users 
+              WHERE created_at >= DATE_SUB(CURDATE(), INTERVAL 30 DAY)
+              GROUP BY DATE(created_at)";
+    
+    $stmt = $db->prepare($query);
+    $stmt->execute();
+    
+    // Merge actual data with initialized array
+    while ($row = $result->fetch_assoc()) {
+        $growthData[$row['date']] = (int)$row['count'];
+    }
+    
+    return $growthData;
+}
+
+public function updateLastLoginDate($id) {
+
+
+    $db = config::getConnexion(); 
+    $query = "UPDATE users
+       SET last_active_account = :now,
+           active_account      = 1
+     WHERE id = :id
+";  
+    $now= date('Y-m-d H:i:s');
+    $stmt= $db->prepare($query);
+    $stmt->bindParam(":now", $now);
+    $stmt->bindParam(":id", $id);
+    $stmt->execute();
+
+    
+    
+    
+    
+}
+
+
 
 }

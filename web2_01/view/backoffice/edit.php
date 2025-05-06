@@ -50,6 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <meta charset="UTF-8">
     <title>Edit User</title>
+    <link rel="stylesheet" href="assets/edit.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -83,6 +84,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         <label>Email</label>
         <input type="email" name="email" value="<?= htmlspecialchars($usr->getEmail()) ?>" required>
+
+        <label for="role">role</label>
+        <select id="role" name="role" required>
+            <?php
+            for ($i = 1; $i <= 5; $i++) {
+                $selected = ($i == $usr->getRole()) ? 'selected' : '';
+                echo "<option value=\"$i\" $selected>$i</option>";
+            }
+            ?>
+        </select>
 
         <label>Password (leave empty if unchanged)</label>
         <input type="password" name="password" placeholder="••••••••">
