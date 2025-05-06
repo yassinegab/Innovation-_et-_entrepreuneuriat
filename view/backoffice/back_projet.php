@@ -1,34 +1,47 @@
 <?php
 include '../../controller/projectcontroller.php';
 include '../../controller/suivicontroller.php';
-
+require '../../sendMail.php'; 
 $controller = new projectcontroller();
-$liste = $controller->projet(); // récupère tous les projets
 $controller2 = new suivicontroller();
+
+// Récupérer tous les projets avec leurs suivis
 $liste = $controller2->getProjectsWithSuivis();
 
 // Supprimer un projet si delete_id est présent
 if (isset($_GET['delete_id'])) {
-    $controller->deleteproject($_GET['delete_id']);
-    header('Location: back_projet.php'); // pour éviter de supprimer plusieurs fois en cas de refresh
-    exit();
+    try {
+        // Supprimer tous les suivis liés à ce projet
+        $controller2->deleteAllSuivisByProject($_GET['delete_id']);
+
+        // Supprimer le projet
+        $controller->deleteproject($_GET['delete_id']);
+
+        // → OPTIONNEL : envoyer un mail après suppression
+       
+        sendMail('meriembennour2004@gmail.com.com', 'Projet supprimé', 'Le projet avec ID ' . $_GET['delete_id'] . ' a été supprimé.');
+
+        header('Location: back_projet.php');
+        exit();
+    } catch (Exception $e) {
+        die('Erreur suppression : ' . $e->getMessage());
+    }
 }
 
+// Supprimer un suivi si delete_suivi est présent
 if (isset($_GET['delete_suivi'])) {
-   
-
     try {
         $controller2->deleteSuivi($_GET['delete_suivi']);
     } catch (Exception $e) {
-        die('❌ Erreur : ' . $e->getMessage());
+        die('Erreur suppression suivi : ' . $e->getMessage());
     }
 
-    header('Location: back_projet.php'); // Reviens à la page normale
+    header('Location: back_projet.php');
     exit();
 }
-
-
 ?>
+
+
 
 
 <!DOCTYPE html>
@@ -390,17 +403,31 @@ if (isset($_GET['delete_suivi'])) {
               'suivis' => []
           ];
       }
-
-      if (!empty($row['etat']) || !empty($row['date_suivi']) || !empty($row['commentaire']) || !empty($row['taux_avancement'])) {
-          $project_data[$id]['suivis'][] = [
-              'id_suivi' => $row['id_suivi'] ?? null,
-              'etat' => $row['etat'],
-              'date_suivi' => $row['date_suivi'],
-              'commentaire' => $row['commentaire'],
-              'taux_avancement' => $row['taux_avancement']
-          ];
-      }
+      if (!empty($row['etat']) || !empty($row['date_suivi']) || !empty($row['commentaire']) || !empty($row['taux_avancement']) || !empty($row['tache'])) {
+        $project_data[$id]['suivis'][] = [
+            'id_suivi' => $row['id_suivi'] ?? null,
+            'etat' => $row['etat'],
+            'date_suivi' => $row['date_suivi'],
+            'commentaire' => $row['commentaire'],
+            'taux_avancement' => $row['taux_avancement'],
+            'tache' => $row['tache'] ?? ''
+        ];
+    }
+    
   }
+  // Ici tu as fini de construire $project_data
+
+foreach ($project_data as $id => &$info) {
+    $latest_progress_per_task = [];
+    foreach ($info['suivis'] as $suivi) {
+        $tache = $suivi['tache'];
+        $latest_progress_per_task[$tache] = intval($suivi['taux_avancement']);
+    }
+    $total = array_sum($latest_progress_per_task);
+    $count = count($latest_progress_per_task);
+    $info['moyenne'] = $count > 0 ? round($total / $count, 2) : 0;
+}
+
 
   foreach ($project_data as $info):
   ?>
@@ -416,6 +443,16 @@ if (isset($_GET['delete_suivi'])) {
       <p>Domaine : <?= htmlspecialchars($info['domaine']) ?></p>
       <p>Date de création : <?= htmlspecialchars($info['date_creation']) ?></p>
       <p>Besoins : <?= htmlspecialchars($info['besoin']) ?></p>
+      
+      <div class="progress-moyenne">
+    <label>📊 Progression moyenne</label>
+    <div class="progress-bar">
+        <div class="progress-fill" style="width: <?= $info['moyenne'] ?>%;"></div>
+    </div>
+    <span class="progress-text"><?= $info['moyenne'] ?>%</span>
+</div>
+
+
 
       <!-- 🔘 Boutons Modifier / Supprimer -->
       <div style="margin-top: 10px;">
@@ -430,6 +467,8 @@ if (isset($_GET['delete_suivi'])) {
           <p><strong>État:</strong> <?= htmlspecialchars($suivi['etat']) ?></p>
           <p><strong>Date:</strong> <?= htmlspecialchars($suivi['date_suivi']) ?></p>
           <p><strong>Commentaire:</strong> <?= htmlspecialchars($suivi['commentaire']) ?></p>
+          <p><strong>Tache:</strong> <?= htmlspecialchars($suivi['tache'] ?? '') ?></p>
+
 
           <!-- 🟡 Barre de progression -->
           <div class="progress-container">

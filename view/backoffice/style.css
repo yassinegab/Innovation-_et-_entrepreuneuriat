@@ -1229,3 +1229,28 @@ input[type="date"]::-webkit-calendar-picker-indicator {
       grid-template-columns: 1fr;
     }
   }
+
+  .progress-moyenne {
+    margin: 10px 0;
+}
+
+.progress-bar {
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 12px;
+    width: 100%;
+    margin: 5px 0;
+}
+
+.progress-fill {
+    background-color: #4caf50; /* vert, tu peux changer en orange ou rouge */
+    height: 100%;
+    transition: width 0.5s ease;
+}
+
+.progress-text {
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 5px;
+}

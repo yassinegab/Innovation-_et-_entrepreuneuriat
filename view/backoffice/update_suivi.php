@@ -23,7 +23,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $_POST['etat'],
         $_POST['commentaire'],
         $_POST['date_suivi'],
-        $_POST['taux_avancement']
+        $_POST['taux_avancement'],
+        $_POST['tache']  // ← ajouté ici
     );
     $controller->updateSuivi($updatedSuivi);
     header("Location: back_projet.php");
@@ -75,10 +76,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <small class="error-message" id="taux_avancement-error"></small>
         </div>
 
-       
-</div>
+        <!-- AJOUT DU CHAMP TÂCHE -->
+        <div class="form-group">
+            <label for="tache">Tâche</label>
+            <input type="text" id="tache" name="tache" value="<?= htmlspecialchars($suivi['tache']) ?>">
+            <small class="error-message" id="tache-error"></small>
+        </div>
 
-
+    </div>
 
     <div class="popup-footer">
         <button type="submit" class="btn btn-primary">Enregistrer</button>
