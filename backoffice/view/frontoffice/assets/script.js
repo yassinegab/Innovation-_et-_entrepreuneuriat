@@ -136,7 +136,7 @@ document.querySelectorAll(".comments-list").forEach((commentsList) => {
       if (confirm("Voulez-vous vraiment supprimer ce commentaire ?")) {
         try {
           const response = await fetch(
-            `commentairecontroller.php?action=delete&id=${commentId}`,
+            `../../../controller/commentairecontroller.php?action=delete&id=${commentId}`,
             {
               method: "DELETE",
             }
@@ -178,7 +178,7 @@ document.querySelectorAll(".comments-list").forEach((commentsList) => {
       saveButton.addEventListener("click", async () => {
         try {
           const response = await fetch(
-            `commentairecontroller.php?action=update`,
+            `../../../controller/commentairecontroller.php?action=update`,
             {
               method: "PUT",
               headers: {
@@ -206,7 +206,7 @@ document.querySelectorAll(".comments-list").forEach((commentsList) => {
     if (e.target.closest(".btn-report")) {
       try {
         const response = await fetch(
-          `commentairecontroller.php?action=report&id=${commentId}`,
+          `../../../controller/commentairecontroller.php?action=report&id=${commentId}`,
           {
             method: "POST",
           }
@@ -220,5 +220,148 @@ document.querySelectorAll(".comments-list").forEach((commentsList) => {
         console.error("Erreur:", error);
       }
     }
+    document.querySelectorAll(".btn-reply").forEach((button) => {
+      button.addEventListener("click", function () {
+        const commentId = this.dataset.id;
+        const commentElement = this.closest(".comment");
+
+        // Check if reply form already exists
+        let replyForm = commentElement.querySelector(".reply-form");
+
+        if (replyForm) {
+          // Toggle the form if it already exists
+          replyForm.classList.toggle("active");
+          return;
+        }
+
+        // Create reply form
+        replyForm = document.createElement("div");
+        replyForm.className = "reply-form active";
+        replyForm.innerHTML = `
+          <textarea placeholder="Écrivez votre réponse..." class="reply-textarea"></textarea>
+          <div class="reply-actions">
+            <button class="btn-cancel">Annuler</button>
+            <button class="btn-submit-reply">Répondre</button>
+          </div>
+        `;
+
+        // Add the form after the comment content
+        commentElement.appendChild(replyForm);
+
+        // Focus the textarea
+        replyForm.querySelector("textarea").focus();
+
+        // Handle cancel button
+        replyForm
+          .querySelector(".btn-cancel")
+          .addEventListener("click", function () {
+            replyForm.remove();
+          });
+
+        // Handle submit button
+        replyForm
+          .querySelector(".btn-submit-reply")
+          .addEventListener("click", async function () {
+            const replyText = replyForm.querySelector("textarea").value.trim();
+
+            if (!replyText) {
+              alert("Veuillez écrire une réponse avant de publier.");
+              return;
+            }
+
+            try {
+              const response = await fetch("index.php", {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/x-www-form-urlencoded",
+                },
+                body: `article_id=${selectedArticleId}&content=${encodeURIComponent(
+                  replyText
+                )}&parent_id=${commentId}`,
+              });
+
+              const result = await response.json();
+
+              if (response.ok && result.success) {
+                // Create and insert the new reply
+                const replyElement = document.createElement("div");
+                replyElement.className = "comment reply-indent";
+                replyElement.dataset.id = result.comment_id;
+                replyElement.innerHTML = `
+                <div class="comment-header">
+                  <span class="name">${result.author}</span>
+                  <div class="comment-actions">
+                    <button class="btn-like" data-id="${result.comment_id}">
+                      <i class="far fa-heart"></i>
+                      <span class="like-count">0</span>
+                    </button>
+                    <button class="btn-modify" title="Modifier" data-id="${result.comment_id}">
+                      <i class="fas fa-edit"></i>
+                    </button>
+                    <button class="btn-delete" title="Supprimer" data-id="${result.comment_id}">
+                      <i class="fas fa-trash"></i>
+                    </button>
+                    <button class="btn-reply" title="Répondre" data-id="${result.comment_id}">
+                      <i class="fas fa-reply"></i>
+                    </button>
+                  </div>
+                </div>
+                <p>${replyText}</p>
+              `;
+
+                // Insert after the parent comment
+                const parentComment = document.querySelector(
+                  `.comment[data-id="${commentId}"]`
+                );
+                if (
+                  parentComment.nextElementSibling &&
+                  parentComment.nextElementSibling.classList.contains(
+                    "reply-container"
+                  )
+                ) {
+                  parentComment.nextElementSibling.appendChild(replyElement);
+                } else {
+                  const replyContainer = document.createElement("div");
+                  replyContainer.className = "reply-container";
+                  replyContainer.appendChild(replyElement);
+                  parentComment.after(replyContainer);
+                }
+
+                // Remove the reply form
+                replyForm.remove();
+              } else if (result.error) {
+                alert("Erreur : " + result.error);
+              }
+            } catch (error) {
+              console.error("Erreur lors de l'envoi de la réponse:", error);
+              alert("Erreur réseau. Merci de réessayer.");
+            }
+          });
+      });
+    });
+  });
+});
+// Gestion des emojis pour le formulaire principal
+document.querySelectorAll(".emoji-button").forEach((button) => {
+  const pickerContainer = button
+    .closest(".form-input")
+    .querySelector(".emoji-picker-container");
+
+  const textarea = button
+    .closest(".textarea-container")
+    .querySelector("textarea");
+
+  // Show/hide emoji picker
+  button.addEventListener("click", (e) => {
+    e.stopPropagation(); // ✅ Prevent click from bubbling
+    pickerContainer.style.display =
+      pickerContainer.style.display === "none" ? "block" : "none";
+  });
+
+  // Add emoji to textarea
+  const picker = pickerContainer.querySelector("emoji-picker");
+  picker.addEventListener("emoji-click", (event) => {
+    textarea.value += event.detail.unicode;
+    pickerContainer.style.display = "none";
   });
 });

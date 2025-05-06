@@ -1,3 +1,13 @@
+<?php
+require_once '../../controller/commentairecontroller.php';
+$CommentaireController = new CommentaireController();
+$listeCommentaire = $CommentaireController->afficher();
+$stats = $CommentaireController->getCommentStats();
+$statusDistribution = $CommentaireController->getStatusDistribution();
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -216,7 +226,7 @@
             </div>
             <div class="stat-content">
               <h3>Total Commentaires</h3>
-              <div class="stat-value">248</div>
+              <div class="stat-value"><?= $stats['total'] ?? 0 ?></div>
               <div class="stat-change positive">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
                   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -239,7 +249,7 @@
             </div>
             <div class="stat-content">
               <h3>En attente</h3>
-              <div class="stat-value">12</div>
+              <div class="stat-value"><?= $stats['pending'] ?? 0 ?></div>
               <div class="stat-change negative">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
                   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -263,7 +273,7 @@
             </div>
             <div class="stat-content">
               <h3>Signalés</h3>
-              <div class="stat-value">8</div>
+              <div class="stat-value"><?= $stats['reported'] ?? 0 ?></div>
               <div class="stat-change negative">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
                   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -285,7 +295,7 @@
             </div>
             <div class="stat-content">
               <h3>Approuvés</h3>
-              <div class="stat-value">228</div>
+              <div class="stat-value"><?= $stats['approved'] ?? 0 ?></div>
               <div class="stat-change positive">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
                   stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -296,36 +306,28 @@
             </div>
           </div>
         </div>
-
         <!-- Charts Section -->
         <div class="charts-section">
-          <!-- Comments Over Time -->
+          <!-- Comments Over Time Chart -->
           <div class="chart-container">
             <div class="chart-header">
               <h2>Commentaires par période</h2>
               <div class="chart-actions">
-                <button class="btn btn-text active">Jour</button>
-                <button class="btn btn-text">Semaine</button>
-                <button class="btn btn-text">Mois</button>
+                <button class="btn btn-text active" onclick="updateCharts('day')">Jour</button>
+                <button class="btn btn-text" onclick="updateCharts('week')">Semaine</button>
+                <button class="btn btn-text" onclick="updateCharts('month')">Mois</button>
               </div>
             </div>
             <div class="chart-body">
               <div class="chart-placeholder">
-                <!-- Placeholder for bar chart -->
-                <div class="chart-bars">
-                  <div class="chart-bar" style="height: 30%"></div>
-                  <div class="chart-bar" style="height: 45%"></div>
-                  <div class="chart-bar" style="height: 60%"></div>
-                  <div class="chart-bar" style="height: 40%"></div>
-                  <div class="chart-bar" style="height: 75%"></div>
-                  <div class="chart-bar" style="height: 55%"></div>
-                  <div class="chart-bar" style="height: 65%"></div>
+                <div class="chart-bars" id="chartBars">
+                  <!-- Dynamic bars will be inserted here by JavaScript -->
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Comments Distribution by Status -->
+          <!-- Status Distribution Pie Chart -->
           <div class="chart-container">
             <div class="chart-header">
               <h2>Répartition par statut</h2>
@@ -342,46 +344,41 @@
             </div>
             <div class="chart-body">
               <div class="chart-placeholder">
-                <!-- Placeholder for pie chart -->
                 <div class="pie-chart">
-                  <div class="pie-segment" style="
-                        --segment-start: 0;
-                        --segment-end: 0.7;
-                        --segment-color: #4caf50;
-                      "></div>
-                  <div class="pie-segment" style="
-                        --segment-start: 0.7;
-                        --segment-end: 0.85;
-                        --segment-color: rgb(227, 196, 58);
-                      "></div>
-                  <div class="pie-segment" style="
-                        --segment-start: 0.85;
-                        --segment-end: 0.95;
-                        --segment-color: #f44336;
-                      "></div>
-                  <div class="pie-segment" style="
-                        --segment-start: 0.95;
-                        --segment-end: 1;
-                        --segment-color: #9c27b0;
-                      "></div>
+                  <?php
+                  $start = 0;
+                  $colors = [
+                    'approved' => '#4caf50', // Green
+                    'pending' => 'rgb(227, 196, 58)', // Yellow
+                    'reported' => '#f44336', // Red
+                    'spam' => '#9c27b0' // Purple
+                  ];
+
+                  foreach ($statusDistribution as $status => $percentage):
+                    $end = $start + ($percentage / 100);
+                  ?>
+                    <div class="pie-segment" style="
+              --segment-start: <?= $start ?>;
+              --segment-end: <?= $end ?>;
+              --segment-color: <?= $colors[$status] ?>;
+            "></div>
+                  <?php $start = $end;
+                  endforeach; ?>
                 </div>
                 <div class="pie-legend">
-                  <div class="legend-item">
-                    <span class="legend-color" style="background-color: #4caf50"></span>
-                    <span>Approuvés (70%)</span>
-                  </div>
-                  <div class="legend-item">
-                    <span class="legend-color" style="background-color: rgb(227, 196, 58)"></span>
-                    <span>En attente (15%)</span>
-                  </div>
-                  <div class="legend-item">
-                    <span class="legend-color" style="background-color: #f44336"></span>
-                    <span>Signalés (10%)</span>
-                  </div>
-                  <div class="legend-item">
-                    <span class="legend-color" style="background-color: #9c27b0"></span>
-                    <span>Spam (5%)</span>
-                  </div>
+                  <?php foreach ($statusDistribution as $status => $percentage): ?>
+                    <div class="legend-item">
+                      <span class="legend-color" style="background-color: <?= $colors[$status] ?>"></span>
+                      <span>
+                        <?= match ($status) {
+                          'approved' => 'Approuvés',
+                          'pending' => 'En attente',
+                          'reported' => 'Signalés',
+                          'spam' => 'Spam'
+                        } ?> (<?= number_format($percentage, 0) ?>%)
+                      </span>
+                    </div>
+                  <?php endforeach; ?>
                 </div>
               </div>
             </div>
@@ -410,247 +407,102 @@
               <thead>
                 <tr>
                   <th>ID</th>
+                  <th>ID De l'article</th>
+                  <th>Nom de l'article</th>
+                  <th>User Id</th>
                   <th>Auteur</th>
-                  <th>Commentaire</th>
-                  <th>Article</th>
-                  <th>Date</th>
-                  <th>Statut</th>
+                  <th>Contenu</th>
+                  <th>Date De Publication</th>
+                  <th>likes</th>
+                  <th>Parent id </th>
+                  <th>Status</th>
+                  <th>Read comment</th>
                   <th>Actions</th>
                 </tr>
               </thead>
               <tbody>
-                <!-- Commentaire 1 -->
-                <tr data-status="pending">
-                  <td>1</td>
-                  <td>
-                    <div class="comment-author-cell">
-                      <img src="https://via.placeholder.com/36" alt="Marie Dupont" />
-                      <span>Marie Dupont</span>
-                    </div>
-                  </td>
-                  <td class="comment-content-cell">
-                    Excellent article ! J'ai particulièrement apprécié l'analyse des tendances technologiques.
-                    Je pense que l'IA va vraiment transformer le paysage entrepreneurial dans les années à venir.
-                  </td>
-                  <td>Les tendances entrepreneuriales en 2023</td>
-                  <td>12/04/2023 14:30</td>
-                  <td>
-                    <span class="table-badge status pending">En attente</span>
-                  </td>
-                  <td>
-                    <div class="table-actions">
-                      <button class="action-icon approve-btn" title="Approuver">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                          <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                          <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                        </svg>
-                      </button>
-                      <button class="action-icon delete-btn" title="Supprimer">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                          <polyline points="3 6 5 6 21 6"></polyline>
-                          <path
-                            d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2">
-                          </path>
-                        </svg>
-                      </button>
-                    </div>
-                  </td>
-                </tr>
+              <tbody>
+                <?php
+                // Define status labels in French
+                $statusLabels = [
+                  'pending' => 'En attente',
+                  'approved' => 'Approuvé',
+                  'reported' => 'Signalé',
+                  'spam' => 'Spam'
+                ];
 
-                <!-- Commentaire 2 -->
-                <tr data-status="approved">
-                  <td>2</td>
-                  <td>
-                    <div class="comment-author-cell">
-                      <img src="https://via.placeholder.com/36" alt="Thomas Martin" />
-                      <span>Thomas Martin</span>
-                    </div>
-                  </td>
-                  <td class="comment-content-cell">
-                    Je suis tout à fait d'accord avec vous Marie. L'IA est déjà en train de révolutionner de nombreux
-                    secteurs.
-                  </td>
-                  <td>Les tendances entrepreneuriales en 2023</td>
-                  <td>13/04/2023 09:15</td>
-                  <td>
-                    <span class="table-badge status approved">Approuvé</span>
-                  </td>
-                  <td>
-                    <div class="table-actions">
-                      <button class="action-icon view-btn" title="Voir">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                          <path d="M1 12s4-8 11-8 11 8  stroke-linejoin="round">
-                          <path d="M1 12s4-8 11-8 11 8 11-8"></path>
-                          <path d="M1 12s4 8 11 8 11-8"></path>
-                          <line x1="12" y1="16" x2="12" y2="12"></line>
-                          <line x1="8" y1="12" x2="16" y2="12"></line>
-                        </svg>
-                      </button>
-                      <button class="action-icon delete-btn" title="Supprimer">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                          <polyline points="3 6 5 6 21 6"></polyline>
-                          <path
-                            d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2">
-                          </path>
-                        </svg>
-                      </button>
-                    </div>
-                  </td>
-                </tr>
+                foreach ($listeCommentaire as $comment) :
+                  // Format date
+                  $formattedDate = date('d/m/Y H:i', strtotime($comment['date_publication']));
+                ?>
+                  <tr data-status="<?= htmlspecialchars($comment['status']) ?>">
+                    <td><?= htmlspecialchars($comment['id']) ?></td>
+                    <td><?= htmlspecialchars($comment['article_id']) ?></td>
+                    <td>
+                      <div class="comment-author-cell">
 
-                <!-- Commentaire 3 -->
-                <tr data-status="reported">
-                  <td>3</td>
-                  <td>
-                    <div class="comment-author-cell">
-                      <img src="https://via.placeholder.com/36" alt="Pierre Lefebvre" />
-                      <span>Pierre Lefebvre</span>
-                    </div>
-                  </td>
-                  <td class="comment-content-cell">
-                    Ce contenu est inapproprié et contient des propos offensants. Je pense qu'il devrait être supprimé.
-                  </td>
-                  <td>Comment lever des fonds pour votre startup</td>
-                  <td>14/04/2023 16:45</td>
-                  <td>
-                    <span class="table-badge status reported">Signalé</span>
-                  </td>
-                  <td>
-                    <div class="table-actions">
-                      <button class="action-icon approve-btn" title="Approuver">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                          <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                          <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                        </svg>
-                      </button>
-                      <button class="action-icon delete-btn" title="Supprimer">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                          <polyline points="3 6 5 6 21 6"></polyline>
-                          <path
-                            d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2">
-                          </path>
-                        </svg>
-                      </button>
-                    </div>
-                  </td>
-                </tr>
-
-                <!-- Commentaire 4 -->
-                <tr data-status="spam">
-                  <td>4</td>
-                  <td>
-                    <div class="comment-author-cell">
-                      <img src="https://via.placeholder.com/36" alt="Anonyme" />
-                      <span>Anonyme</span>
-                    </div>
-                  </td>
-                  <td class="comment-content-cell">
-                    Visitez notre site web pour des offres incroyables ! www.exemple-spam.com
-                  </td>
-                  <td>L'importance du marketing digital</td>
-                  <td>15/04/2023 08:20</td>
-                  <td>
-                    <span class="table-badge status spam">Spam</span>
-                  </td>
-                  <td>
-                    <div class="table-actions">
-                      <button class="action-icon approve-btn" title="Approuver">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                          <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                          <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                        </svg>
-                      </button>
-                      <button class="action-icon delete-btn" title="Supprimer">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                          <polyline points="3 6 5 6 21 6"></polyline>
-                          <path
-                            d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2">
-                          </path>
-                        </svg>
-                      </button>
-                    </div>
-                  </td>
-                </tr>
-
-                <!-- Commentaire 5 -->
-                <tr data-status="approved">
-                  <td>5</td>
-                  <td>
-                    <div class="comment-author-cell">
-                      <img src="https://via.placeholder.com/36" alt="Sophie Bernard" />
-                      <span>Sophie Bernard</span>
-                    </div>
-                  </td>
-                  <td class="comment-content-cell">
-                    En tant qu'entrepreneur dans le secteur de la tech, je trouve que cet article résume parfaitement les
-                    défis auxquels nous sommes confrontés. J'ai hâte de lire vos prochains articles sur ce sujet !
-                  </td>
-                  <td>Innovations technologiques pour entrepreneurs</td>
-                  <td>16/04/2023 11:05</td>
-                  <td>
-                    <span class="table-badge status approved">Approuvé</span>
-                  </td>
-                  <td>
-                    <div class="table-actions">
-                      <button class="action-icon view-btn" title="Voir">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                          <path d="M1 12s4-8 11-8 11 8 11-8"></path>
-                          <path d="M1 12s4 8 11 8 11-8"></path>
-                          <line x1="12" y1="16" x2="12" y2="12"></line>
-                          <line x1="8" y1="12" x2="16" y2="12"></line>
-                        </svg>
-                      </button>
-                      <button class="action-icon delete-btn" title="Supprimer">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                          <polyline points="3 6 5 6 21 6"></polyline>
-                          <path
-                            d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2">
-                          </path>
-                        </svg>
-                      </button>
-                    </div>
-                  </td>
-                </tr>
+                        <span><?= htmlspecialchars($comment['nom_article'] ?? 'N/A') ?></span>
+                      </div>
+                    </td>
+                    <td><?= htmlspecialchars($comment['user_id']) ?></td>
+                    <td><?= htmlspecialchars($comment['auteur']) ?></td>
+                    <td class="comment-content-cell"><?= htmlspecialchars($comment['contenu']) ?></td>
+                    <td><?= $formattedDate ?></td>
+                    <td><?= htmlspecialchars($comment['likes']) ?></td>
+                    <td><?= htmlspecialchars($comment['parent_id']) ?></td>
+                    <td>
+                      <span class="table-badge status <?= htmlspecialchars($comment['status']) ?>">
+                        <?= $statusLabels[$comment['status']] ?? htmlspecialchars($comment['status']) ?>
+                      </span>
+                    </td>
+                    <td><?= htmlspecialchars($comment['is_read']) ?></td>
+                    <td>
+                      <div class="table-actions">
+                        <button class="action-icon approve-btn" title="Approuver">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                          </svg>
+                        </button>
+                        <button class="action-icon delete-btn" title="Supprimer">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="3 6 5 6 21 6"></polyline>
+                            <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                          </svg>
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                <?php endforeach; ?>
               </tbody>
-            </table>
+              <div class="table-footer">
+                <div class="pagination">
+                  <button class="pagination-btn" disabled>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                  </button>
+                  <button class="pagination-btn active">1</button>
+                  <button class="pagination-btn">2</button>
+                  <button class="pagination-btn">3</button>
+                  <span class="pagination-ellipsis">...</span>
+                  <button class="pagination-btn">8</button>
+                  <button class="pagination-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                  </button>
+                </div>
+              </div>
           </div>
 
-          <div class="table-footer">
-            <div class="pagination">
-              <button class="pagination-btn" disabled>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <polyline points="15 18 9 12 15 6"></polyline>
-                </svg>
-              </button>
-              <button class="pagination-btn active">1</button>
-              <button class="pagination-btn">2</button>
-              <button class="pagination-btn">3</button>
-              <span class="pagination-ellipsis">...</span>
-              <button class="pagination-btn">8</button>
-              <button class="pagination-btn">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <polyline points="9 18 15 12 9 6"></polyline>
-                </svg>
-              </button>
-            </div>
-          </div>
+          <!-- Alert Container -->
+          <div class="alert-container" id="alertContainer"></div>
         </div>
-
-        <!-- Alert Container -->
-        <div class="alert-container" id="alertContainer"></div>
-      </div>
     </main>
   </div>
 

@@ -216,6 +216,48 @@ class ArticleController
             return false;
         }
     }
-    
-}
+    public function getCommentStats()
+    {
+        try {
+            $db = Config::getConnexion();
 
+            $stats = [
+                'total' => $db->query("SELECT COUNT(*) FROM commentaires")->fetchColumn(),
+                'pending' => $db->query("SELECT COUNT(*) FROM commentaires WHERE status = 'pending'")->fetchColumn(),
+                'reported' => $db->query("SELECT COUNT(*) FROM commentaires WHERE status = 'reported'")->fetchColumn(),
+                'approved' => $db->query("SELECT COUNT(*) FROM commentaires WHERE status = 'approved'")->fetchColumn()
+            ];
+
+            return $stats;
+        } catch (PDOException $e) {
+            error_log("Erreur dans getCommentStats(): " . $e->getMessage());
+            return [];
+        }
+    }
+
+    public function getCommentsOverTime($period = 'day')
+    {
+        try {
+            $db = Config::getConnexion();
+            $format = match ($period) {
+                'day' => '%Y-%m-%d',
+                'week' => '%Y-%u',
+                'month' => '%Y-%m',
+                default => '%Y-%m-%d'
+            };
+
+            $sql = "SELECT 
+                    DATE_FORMAT(date_publication, '$format') AS period,
+                    COUNT(*) AS count 
+                    FROM commentaires 
+                    GROUP BY period 
+                    ORDER BY period DESC 
+                    LIMIT 7";
+
+            return $db->query($sql)->fetchAll(PDO::FETCH_ASSOC);
+        } catch (PDOException $e) {
+            error_log("Erreur dans getCommentsOverTime(): " . $e->getMessage());
+            return [];
+        }
+    }
+}

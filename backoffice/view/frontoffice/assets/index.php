@@ -1,7 +1,7 @@
 <?php
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
-session_start();
+// session_start();
 
 // Configuration de test
 $_SESSION['user_id'] = 1;
@@ -80,6 +80,27 @@ function timeAgo($datetime)
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <!-- Emoji Picker Element -->
+  <script src="https://cdn.jsdelivr.net/npm/emoji-picker-element@^1/index.js" type="module"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/emoji-picker-element@^1/css/emoji-picker.css">
+  <style>
+    /* Custom emoji picker styling to match your dark theme */
+    emoji-picker {
+      --background: var(--color-foreground);
+      --border-color: var(--color-border);
+      --indicator-color: var(--color-primary);
+      --input-border-color: var(--color-border);
+      --input-font-color: var(--color-text);
+      --input-placeholder-color: var(--color-text-secondary);
+      --outline-color: var(--color-primary);
+      --category-font-color: var(--color-text);
+      --button-hover-background: rgba(255, 255, 255, 0.1);
+      --button-active-background: rgba(255, 255, 255, 0.05);
+      --skintone-border-color: var(--color-border);
+      width: 100%;
+      max-height: 300px;
+    }
+  </style>
 </head>
 
 
@@ -274,7 +295,20 @@ function timeAgo($datetime)
               <div class="comments-list">
                 <?php
                 $commentaires = $commentaireController->getCommentairesByArticle($selectedArticle->getId());
-                foreach ($commentaires as $commentaire):
+                $parentComments = [];
+                $childComments = [];
+
+                // Separate parent and child comments
+                foreach ($commentaires as $commentaire) {
+                  if ($commentaire->getParentId() === null) {
+                    $parentComments[] = $commentaire;
+                  } else {
+                    $childComments[$commentaire->getParentId()][] = $commentaire;
+                  }
+                }
+
+                // Display parent comments and their replies
+                foreach ($parentComments as $commentaire):
                 ?>
                   <div class="comment" data-id="<?= $commentaire->getId() ?>">
                     <div class="comment-header">
@@ -294,15 +328,55 @@ function timeAgo($datetime)
                           </button>
                         <?php endif; ?>
 
-                        <?php if ($_SESSION['user_id'] != $commentaire->getUserId()): ?>
+                        <?php if ($_SESSION['user_id'] == $commentaire->getUserId()): ?>
                           <button class="btn-report" title="Signaler" data-id="<?= $commentaire->getId() ?>">
                             <i class="fas fa-flag"></i>
                           </button>
                         <?php endif; ?>
+                        <button class="btn-reply" title="Répondre" data-id="<?= $commentaire->getId() ?>">
+                          <i class="fas fa-reply"></i>
+                        </button>
                       </div>
                     </div>
                     <p><?= htmlspecialchars($commentaire->getContenu()) ?></p>
                   </div>
+
+                  <?php if (isset($childComments[$commentaire->getId()])): ?>
+                    <div class="reply-container">
+                      <?php foreach ($childComments[$commentaire->getId()] as $reply): ?>
+                        <div class="comment reply-indent" data-id="<?= $reply->getId() ?>">
+                          <div class="comment-header">
+                            <span class="name"><?= htmlspecialchars($reply->getAuteur()) ?></span>
+
+                            <div class="comment-actions">
+                              <button class="btn-like" data-id="<?= $reply->getId() ?>">
+                                <i class="far fa-heart"></i>
+                                <span class="like-count"><?= $reply->getLikes() ?></span>
+                              </button>
+                              <?php if ($_SESSION['user_id'] == $reply->getUserId() || $_SESSION['is_admin']): ?>
+                                <button class="btn-modify" title="Modifier" data-id="<?= $reply->getId() ?>">
+                                  <i class="fas fa-edit"></i>
+                                </button>
+                                <button class="btn-delete" title="Supprimer" data-id="<?= $reply->getId() ?>">
+                                  <i class="fas fa-trash"></i>
+                                </button>
+                              <?php endif; ?>
+
+                              <?php if ($_SESSION['user_id'] == $reply->getUserId()): ?>
+                                <button class="btn-report" title="Signaler" data-id="<?= $reply->getId() ?>">
+                                  <i class="fas fa-flag"></i>
+                                </button>
+                              <?php endif; ?>
+                              <button class="btn-reply" title="Répondre" data-id="<?= $reply->getId() ?>">
+                                <i class="fas fa-reply"></i>
+                              </button>
+                            </div>
+                          </div>
+                          <p><?= htmlspecialchars($reply->getContenu()) ?></p>
+                        </div>
+                      <?php endforeach; ?>
+                    </div>
+                  <?php endif; ?>
                 <?php endforeach; ?>
               </div>
               <button class="load-more">Voir plus de commentaires</button>

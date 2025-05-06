@@ -972,3 +972,206 @@ footer {
 .btn-like .like-count {
     font-size: 0.9em;
 }
+/* Reply functionality styles - add these to your styles.css file */
+
+/* Reply container styling */
+.reply-container {
+    margin-left: 40px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    border-left: 2px solid var(--color-primary);
+    padding-left: 0;
+  }
+  
+  /* Reply comment styling */
+  .comment.reply-indent {
+    margin-left: 0;
+    border-left: none;
+    border-radius: var(--radius);
+    margin-bottom: 10px;
+    background-color: rgba(255, 255, 255, 0.03);
+  }
+  
+  /* Reply form styling */
+  .reply-form {
+    margin-top: 12px;
+    padding: 12px;
+    background-color: var(--color-background);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    display: none;
+  }
+  
+  .reply-form.active {
+    display: block;
+  }
+  
+  .reply-textarea {
+    width: 100%;
+    height: 80px;
+    padding: 12px;
+    background-color: var(--color-background);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    color: var(--color-text);
+    font-family: var(--font-sans);
+    resize: none;
+    margin-bottom: 12px;
+  }
+  
+  .reply-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+  }
+  
+  .reply-actions button {
+    padding: 6px 12px;
+    border-radius: var(--radius);
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .btn-cancel {
+    background-color: transparent;
+    border: 1px solid var(--color-border);
+    color: var(--color-text);
+  }
+  
+  .btn-cancel:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+  
+  .btn-submit-reply {
+    background-color: var(--color-primary);
+    border: none;
+    color: #000;
+    font-weight: 600;
+  }
+  
+  .btn-submit-reply:hover {
+    background-color: var(--color-primary-hover);
+  }
+  
+  /* Reply button styling */
+  .btn-reply {
+    background: none;
+    border: none;
+    color: var(--color-text-secondary);
+    cursor: pointer;
+    padding: 0.25rem 0.5rem;
+    transition: all 0.2s;
+    border-radius: var(--radius);
+  }
+  
+  .btn-reply:hover {
+    color: var(--color-primary);
+    background: rgba(255, 202, 40, 0.1);
+  }
+  
+  /* Nested replies (for replies to replies) */
+  .reply-container .reply-container {
+    margin-left: 20px;
+    border-left-color: var(--color-link);
+  }
+  
+  /* Visual indicator for reply relationship */
+  .reply-container:before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    width: 20px;
+    height: 10px;
+    border-left: 2px solid var(--color-primary);
+    border-bottom: 2px solid var(--color-primary);
+    border-bottom-left-radius: 6px;
+  }
+  
+  /* Make sure the reply container has proper positioning for the indicator */
+  .reply-container {
+    position: relative;
+  }
+  
+  /* Enhance the reply button to make it more noticeable */
+  .comment-actions .btn-reply {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  
+  .comment-actions .btn-reply i {
+    font-size: 0.9em;
+  }
+  
+  /* Add a subtle hover effect to comments to improve UX */
+  .comment:hover {
+    border-color: var(--color-primary);
+  }
+  
+  /* Style for when a reply form is active */
+  .comment.has-active-reply {
+    border-color: var(--color-primary);
+  }
+  
+  /* Mobile responsiveness for replies */
+  @media (max-width: 576px) {
+    .reply-container {
+      margin-left: 20px;
+    }
+    
+    .reply-actions {
+      flex-direction: column;
+      gap: 8px;
+    }
+    
+    .reply-actions button {
+      width: 100%;
+    }
+  }
+  /* Emoji picker styling */
+.textarea-container {
+    position: relative;
+    width: 100%;
+  }
+  
+  .emoji-button {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    background: none;
+    border: none;
+    color: var(--color-text-secondary);
+    font-size: 16px;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 50%;
+    transition: all 0.2s;
+  }
+  
+  .emoji-button:hover {
+    color: var(--color-primary);
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+  
+  .emoji-picker-container {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+  
+  /* Adjust textarea padding to avoid emoji button overlap */
+  .form-input textarea,
+  .reply-textarea {
+    padding-right: 40px;
+  }
+  
+  /* Style for emoji in comments */
+  .comment p .emoji {
+    height: 1.2em;
+    width: 1.2em;
+    margin: 0 0.05em 0 0.1em;
+    vertical-align: -0.1em;
+  }

@@ -556,16 +556,23 @@ body {
 
 .pie-segment {
   position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
-  background: conic-gradient(
-    var(--segment-color) calc(var(--segment-start) * 360deg),
-    var(--segment-color) calc(var(--segment-end) * 360deg),
-    transparent calc(var(--segment-end) * 360deg)
-  );
+  clip-path: polygon(50% 50%, 100% 0, 100% 100%, 0 100%, 0 0);
+  transform-origin: 50% 50%;
+  transform: rotate(var(--segment-start)) skewY(-60deg);
+  background-color: var(--segment-color);
+  transition: transform 1s ease-in-out;
 }
+
+.pie-segment:nth-child(1) {
+  transform: rotate(var(--segment-start)) skewY(-60deg);
+}
+
+.pie-segment:nth-child(2) {
+  transform: rotate(var(--segment-end)) skewY(-60deg);
+}
+
 
 .pie-legend {
   margin-left: 2rem;
