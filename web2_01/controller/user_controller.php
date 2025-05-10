@@ -336,6 +336,17 @@ public function updateLastLoginDate($id) {
     
     
 }
+public function login_user1($usr) {
+    $db = config::getConnexion();
+    $query = $db->prepare("SELECT * FROM users WHERE email = :email AND password = :password");
+    $query->bindValue(':email', $usr->getEmail());
+    $query->bindValue(':password', $usr->getPassword());
+    $query->execute();
+    $user = $query->fetch(PDO::FETCH_ASSOC); // <<< important : fetch associative
+
+    return $user; // <<< retourne l’utilisateur trouvé
+}
+
 
 
 

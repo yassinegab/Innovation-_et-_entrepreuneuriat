@@ -15,11 +15,27 @@ if (!isset($_SESSION['user_id'])|| (!($_SESSION['user_id'])==0)) {
     <link rel="stylesheet" href="theme-custom.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
 </head>
-<body>j
+<body>
+<div class="sidebar">
+        <div class="sidebar-header">
+            <h1>STELLIFEROUS</h1>
+        </div>
+        <div class="search-box">
+            <input type="text" placeholder="Rechercher...">
+        </div>
+        <ul class="nav-menu">
+            <li class="nav-item"><a href="admin.php">Accueil</a></li>
+            <li class="nav-item"><a href="evenements.php">Événements</a></li>
+            <li class="nav-item active"><a href="/intg/produittt/view/backoffice/back_projet.php">Projets</a></li>
+            <li class="nav-item"><a href="mentors.php">Mentors</a></li>
+            <li class="nav-item"><a href="ressources.php">Ressources</a></li>
+            <li class="nav-item"><a href="a-propos.php">À propos</a></li>
+        </ul>
+    </div>
+
 <header>
-    <h1>Gérer les utilisateurs</h1>
-    <button id="addUserBtn">+ Ajouter un utilisateur</button>
-    <a href="admin_dashboard.php" class="btn-back">← Retour</a>
+  
+    
     
     <h1>Gérer les utilisateurs</h1>
     <button id="addUserBtn">+ Ajouter un utilisateur</button>

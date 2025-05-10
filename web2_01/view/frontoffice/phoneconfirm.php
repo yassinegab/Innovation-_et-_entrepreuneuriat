@@ -11,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $id = $_SESSION['user_id'];
         
 
-        header("Location: user_profile.php");
+        header("Location: general.php");
       }
       
 
