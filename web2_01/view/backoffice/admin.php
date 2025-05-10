@@ -25,7 +25,7 @@ if (!isset($_SESSION['user_id'])|| (!($_SESSION['user_id'])==0)) {
         </div>
         <ul class="nav-menu">
             <li class="nav-item"><a href="admin.php">Accueil</a></li>
-            <li class="nav-item"><a href="evenements.php">Événements</a></li>
+            <li class="nav-item"><a href="/intg/projetweb1/view/backoffice/formulaire-evenement.php">Événements</a></li>
             <li class="nav-item active"><a href="/intg/produittt/view/backoffice/back_projet.php">Projets</a></li>
             <li class="nav-item"><a href="mentors.php">Mentors</a></li>
             <li class="nav-item"><a href="ressources.php">Ressources</a></li>

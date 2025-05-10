@@ -10,7 +10,7 @@ if (!class_exists('Config')) {
                 $servername = "localhost";
                 $username = "root";
                 $password = "";
-                $dbname = "gestion_projets";
+                $dbname = "web";
 
                 try {
                     self::$pdo = new PDO(
