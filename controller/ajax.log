@@ -1,0 +1,1984 @@
+🛠 Entering controller.php? id=71
+🛠 Entering controller.php? action=delete&id=13
+🛠 action=delete — calling handleRequest()
+🛠 Entering controller.php? id=71
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=71
+🛠 Entering controller.php? action=update
+🛠 action=update — calling handleRequest()
+🛠 Entering controller.php? id=71
+🛠 Entering controller.php? action=report&id=16
+🛠 action=report — calling handleRequest()
+🛠 Entering controller.php? id=72
+🛠 Entering controller.php? action=delete&id=12
+🛠 action=delete — calling handleRequest()
+🛠 Entering controller.php? action=delete&id=11
+🛠 action=delete — calling handleRequest()
+🛠 Entering controller.php? action=delete&id=10
+🛠 action=delete — calling handleRequest()
+🛠 Entering controller.php? action=delete&id=9
+🛠 action=delete — calling handleRequest()
+🛠 Entering controller.php? action=delete&id=8
+🛠 action=delete — calling handleRequest()
+🛠 Entering controller.php? action=delete&id=7
+🛠 action=delete — calling handleRequest()
+🛠 Entering controller.php? action=delete&id=5
+🛠 action=delete — calling handleRequest()
+🛠 Entering controller.php? action=delete&id=4
+🛠 action=delete — calling handleRequest()
+🛠 Entering controller.php? action=delete&id=3
+🛠 action=delete — calling handleRequest()
+🛠 Entering controller.php? action=delete&id=2
+🛠 action=delete — calling handleRequest()
+🛠 Entering controller.php? action=delete&id=1
+🛠 action=delete — calling handleRequest()
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=72
+🛠 Entering controller.php? action=delete&id=1
+🛠 action=delete — calling handleRequest()
+🛠 Entering controller.php? id=72
+🛠 Entering controller.php? action=delete&id=17
+🛠 action=delete — calling handleRequest()
+🛠 Entering controller.php? id=72
+🛠 Entering controller.php? action=delete&id=1
+🛠 action=delete — calling handleRequest()
+🛠 Entering controller.php? id=72
+🛠 Entering controller.php? id=75
+🛠 Entering controller.php? action=report&id=14
+🛠 action=report — calling handleRequest()
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=75
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=75
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? action=delete&id=14
+🛠 action=delete — calling handleRequest()
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? action=approve
+🛠 action=approve — calling handleRequest()
+🛠 Entering controller.php? 
+🛠 Entering controller.php? action=approve
+🛠 action=approve — calling handleRequest()
+🛠 Entering controller.php? 
+🛠 Entering controller.php? action=approve
+🛠 action=approve — calling handleRequest()
+🛠 Entering controller.php? 
+🛠 Entering controller.php? action=approve
+🛠 action=approve — calling handleRequest()
+🛠 Entering controller.php? 
+🛠 Entering controller.php? action=approve
+🛠 action=approve — calling handleRequest()
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? action=approve
+🛠 action=approve — calling handleRequest()
+🛠 Entering controller.php? 
+🛠 Entering controller.php? action=approve
+🛠 action=approve — calling handleRequest()
+🛠 Entering controller.php? 
+🛠 Entering controller.php? action=approve
+🛠 action=approve — calling handleRequest()
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? action=approve
+🛠 action=approve — calling handleRequest()
+🛠 Entering controller.php? 
+🛠 Entering controller.php? action=approve
+🛠 action=approve — calling handleRequest()
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? action=approve
+🛠 action=approve — calling handleRequest()
+🛠 Entering controller.php? 
+🛠 Entering controller.php? action=approve
+🛠 action=approve — calling handleRequest()
+🛠 Entering controller.php? 
+🛠 Entering controller.php? action=approve
+🛠 action=approve — calling handleRequest()
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=75
+🛠 Entering controller.php? 
+🛠 Entering controller.php? action=approve
+🛠 action=approve — calling handleRequest()
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? action=delete&id=19
+🛠 action=delete — calling handleRequest()
+🛠 Entering controller.php? 
+🛠 Entering controller.php? action=delete&id=1
+🛠 action=delete — calling handleRequest()
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? action=report&id=19
+🛠 action=report — calling handleRequest()
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=75
+🛠 Entering controller.php? action=report&id=18
+🛠 action=report — calling handleRequest()
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? action=chart&period=semaine
+🛠 action=chart — calling handleRequest()
+🛠 Entering controller.php? action=chart&period=mois
+🛠 action=chart — calling handleRequest()
+🛠 Entering controller.php? action=chart&period=jour
+🛠 action=chart — calling handleRequest()
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? action=chart&period=semaine
+🛠 action=chart — calling handleRequest()
+🛠 Entering controller.php? action=chart&period=jour
+🛠 action=chart — calling handleRequest()
+🛠 Entering controller.php? action=chart&period=semaine
+🛠 action=chart — calling handleRequest()
+🛠 Entering controller.php? action=chart&period=mois
+🛠 action=chart — calling handleRequest()
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? action=chart&period=semaine
+🛠 action=chart — calling handleRequest()
+🛠 Entering controller.php? action=chart&period=week
+🛠 action=chart — calling handleRequest()
+🛠 Entering controller.php? action=chart&period=month
+🛠 action=chart — calling handleRequest()
+🛠 Entering controller.php? action=chart&period=mois
+🛠 action=chart — calling handleRequest()
+🛠 Entering controller.php? action=chart&period=jour
+🛠 action=chart — calling handleRequest()
+🛠 Entering controller.php? action=chart&period=day
+🛠 action=chart — calling handleRequest()
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=75
+🛠 Entering controller.php? 
+🛠 Entering controller.php? error=add_failed
+🛠 Entering controller.php? error=add_failed
+🛠 Entering controller.php? 
+🛠 Entering controller.php? error=add_failed
+🛠 Entering controller.php? error=add_failed
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=1
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=1
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=1
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=1
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=1
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=1
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=1
+🛠 Entering controller.php? id=1
+🛠 Entering controller.php? id=1
+🛠 Entering controller.php? action=update
+🛠 action=update — calling handleRequest()
+🛠 Entering controller.php? id=1
+🛠 Entering controller.php? 
+🛠 Entering controller.php? error=add_failed
+🛠 Entering controller.php? action=approve
+🛠 action=approve — calling handleRequest()
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=1
+🛠 Entering controller.php? id=1
+🛠 Entering controller.php? id=1
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=1
+🛠 Entering controller.php? 
+🛠 Entering controller.php? action=delete&id=1
+🛠 action=delete — calling handleRequest()
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=1
+🛠 Entering controller.php? id=1
+🛠 Entering controller.php? 
+🛠 Entering controller.php? action=report&id=2
+🛠 action=report — calling handleRequest()
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? error=add_failed
+🛠 Entering controller.php? id=1
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? 
+🛠 Entering controller.php? error=add_failed
+🛠 Entering controller.php? error=add_failed
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? 
+🛠 Entering controller.php? action=chart&period=week
+🛠 action=chart — calling handleRequest()
+🛠 Entering controller.php? action=chart&period=semaine
+🛠 action=chart — calling handleRequest()
+🛠 Entering controller.php? action=chart&period=mois
+🛠 action=chart — calling handleRequest()
+🛠 Entering controller.php? action=chart&period=month
+🛠 action=chart — calling handleRequest()
+🛠 Entering controller.php? action=chart&period=jour
+🛠 action=chart — calling handleRequest()
+🛠 Entering controller.php? action=chart&period=day
+🛠 action=chart — calling handleRequest()
+🛠 Entering controller.php? id=1
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=1
+🛠 Entering controller.php? action=update
+🛠 action=update — calling handleRequest()
+🛠 Entering controller.php? 
+🛠 Entering controller.php? action=delete&id=2
+🛠 action=delete — calling handleRequest()
+🛠 Entering controller.php? 
+🛠 Entering controller.php? action=report&id=4
+🛠 action=report — calling handleRequest()
+🛠 Entering controller.php? 
+🛠 Entering controller.php? action=approve
+🛠 action=approve — calling handleRequest()
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? error=add_failed
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? action=report&id=5
+🛠 action=report — calling handleRequest()
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? error=add_failed
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? 
+🛠 Entering controller.php? action=delete&id=undefined
+🛠 action=delete — calling handleRequest()
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? action=delete&id=9
+🛠 action=delete — calling handleRequest()
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? action=delete&id=8
+🛠 action=delete — calling handleRequest()
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? action=delete&id=10
+🛠 action=delete — calling handleRequest()
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? action=delete&id=12
+🛠 action=delete — calling handleRequest()
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? action=delete&id=7
+🛠 action=delete — calling handleRequest()
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? action=delete&id=13
+🛠 action=delete — calling handleRequest()
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? 
+🛠 Entering controller.php? error=add_failed
+🛠 Entering controller.php? action=delete&id=15
+🛠 action=delete — calling handleRequest()
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? action=delete&id=33
+🛠 action=delete — calling handleRequest()
+🛠 Entering controller.php? action=delete&id=32
+🛠 action=delete — calling handleRequest()
+🛠 Entering controller.php? action=delete&id=31
+🛠 action=delete — calling handleRequest()
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? action=report&id=14
+🛠 action=report — calling handleRequest()
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? id=1
+🛠 Entering controller.php? 
+🛠 Entering controller.php? action=report&id=4
+🛠 action=report — calling handleRequest()
+🛠 Entering controller.php? error=add_failed
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? error=add_failed
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? action=delete&id=47
+🛠 action=delete — calling handleRequest()
+🛠 Entering controller.php? action=delete&id=46
+🛠 action=delete — calling handleRequest()
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? action=delete&id=5
+🛠 action=delete — calling handleRequest()
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? action=delete&id=3
+🛠 action=delete — calling handleRequest()
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? action=delete&id=46
+🛠 action=delete — calling handleRequest()
+🛠 Entering controller.php? action=delete&id=47
+🛠 action=delete — calling handleRequest()
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? action=delete&id=47
+🛠 action=delete — calling handleRequest()
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=1
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? 
+🛠 Entering controller.php? error=add_failed
+🛠 Entering controller.php? error=add_failed
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? 
+🛠 Entering controller.php? error=add_failed
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? 
+🛠 Entering controller.php? error=add_failed
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=1
+🛠 Entering controller.php? id=1
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=1
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=1
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=1
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=1
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=1
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? id=1
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? id=1
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? error=add_failed
+🛠 Entering controller.php? 
+🛠 Entering controller.php? error=add_failed
+🛠 Entering controller.php? error=add_failed
+🛠 Entering controller.php? error=add_failed
+🛠 Entering controller.php? error=add_failed
+🛠 Entering controller.php? error=add_failed
+🛠 Entering controller.php? error=add_failed
+🛠 Entering controller.php? error=add_failed
+🛠 Entering controller.php? error=add_failed
+🛠 Entering controller.php? id=1
+🛠 Entering controller.php? error=delete_failed
+🛠 Entering controller.php? id=1
+🛠 Entering controller.php? error=delete_failed
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? error=delete_failed
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=1
+🛠 Entering controller.php? id=1
+🛠 Entering controller.php? id=1
+🛠 Entering controller.php? id=1
+🛠 Entering controller.php? id=1
+🛠 Entering controller.php? id=1
+🛠 Entering controller.php? id=1
+🛠 Entering controller.php? error=delete_failed
+🛠 Entering controller.php? error=delete_failed
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=1
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=1
+🛠 Entering controller.php? error=add_failed
+🛠 Entering controller.php? id=1
+🛠 Entering controller.php? error=delete_failed
+🛠 Entering controller.php? error=delete_failed
+🛠 Entering controller.php? error=delete_failed
+🛠 Entering controller.php? error=delete_failed
+🛠 Entering controller.php? id=1
+🛠 Entering controller.php? error=delete_failed
+🛠 Entering controller.php? error=delete_failed
+🛠 Entering controller.php? error=delete_failed
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=1
+🛠 Entering controller.php? error=delete_failed
+🛠 Entering controller.php? id=1
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=1
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=1
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=1
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=1
+🛠 Entering controller.php? id=1
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=1
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=1
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=1
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=1
+🛠 Entering controller.php? id=1
+🛠 Entering controller.php? id=1
+🛠 Entering controller.php? id=1
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=1
+🛠 Entering controller.php? error=delete_failed
+🛠 Entering controller.php? error=delete_failed
+🛠 Entering controller.php? error=delete_failed
+🛠 Entering controller.php? id=1
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=1
+🛠 Entering controller.php? id=1
+🛠 Entering controller.php? id=1
+🛠 Entering controller.php? error=delete_failed
+🛠 Entering controller.php? id=1
+🛠 Entering controller.php? id=1
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? action=delete&id=48
+🛠 action=delete — calling handleRequest()
+🛠 Entering controller.php? action=report&id=43
+🛠 action=report — calling handleRequest()
+🛠 Entering controller.php? error=add_failed
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? error=add_failed
+🛠 Entering controller.php? error=add_failed
+🛠 Entering controller.php? error=add_failed
+🛠 Entering controller.php? error=add_failed
+🛠 Entering controller.php? error=add_failed
+🛠 Entering controller.php? error=add_failed
+🛠 Entering controller.php? error=add_failed
+🛠 Entering controller.php? error=add_failed
+🛠 Entering controller.php? error=add_failed
+🛠 Entering controller.php? error=add_failed
+🛠 Entering controller.php? error=add_failed
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? error=add_failed
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? error=delete_failed
+🛠 Entering controller.php? error=delete_failed
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? error=delete_failed
+🛠 Entering controller.php? error=delete_failed
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? error=delete_failed
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? error=delete_failed
+🛠 Entering controller.php? error=delete_failed
+🛠 Entering controller.php? error=delete_failed
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? action=delete&id=66
+🛠 action=delete — calling handleRequest()
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? action=delete&id=82
+🛠 action=delete — calling handleRequest()
+🛠 Entering controller.php? action=delete&id=83
+🛠 action=delete — calling handleRequest()
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? action=delete&id=81
+🛠 action=delete — calling handleRequest()
+🛠 Entering controller.php? action=delete&id=82
+🛠 action=delete — calling handleRequest()
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? action=delete&id=85
+🛠 action=delete — calling handleRequest()
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? error=delete_failed
+🛠 Entering controller.php? error=delete_failed
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? action=update
+🛠 action=update — calling handleRequest()
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? action=delete&id=98
+🛠 action=delete — calling handleRequest()
+🛠 Entering controller.php? action=delete&id=99
+🛠 action=delete — calling handleRequest()
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? action=delete&id=101
+🛠 action=delete — calling handleRequest()
+🛠 Entering controller.php? action=delete&id=100
+🛠 action=delete — calling handleRequest()
+🛠 Entering controller.php? action=delete&id=102
+🛠 action=delete — calling handleRequest()
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? action=report&id=103
+🛠 action=report — calling handleRequest()
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? action=delete&id=108
+🛠 action=delete — calling handleRequest()
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? action=delete&id=109
+🛠 action=delete — calling handleRequest()
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? action=delete&id=110
+🛠 action=delete — calling handleRequest()
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? action=delete&id=111
+🛠 action=delete — calling handleRequest()
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? action=delete&id=112
+🛠 action=delete — calling handleRequest()
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? action=delete&id=113
+🛠 action=delete — calling handleRequest()
+🛠 Entering controller.php? action=delete&id=115
+🛠 action=delete — calling handleRequest()
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? action=delete&id=116
+🛠 action=delete — calling handleRequest()
+🛠 Entering controller.php? action=delete&id=114
+🛠 action=delete — calling handleRequest()
+🛠 Entering controller.php? action=delete&id=105
+🛠 action=delete — calling handleRequest()
+🛠 Entering controller.php? action=delete&id=104
+🛠 action=delete — calling handleRequest()
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? action=delete&id=120
+🛠 action=delete — calling handleRequest()
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? action=delete&id=121
+🛠 action=delete — calling handleRequest()
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? action=delete&id=122
+🛠 action=delete — calling handleRequest()
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? action=delete&id=117
+🛠 action=delete — calling handleRequest()
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? action=delete&id=90
+🛠 action=delete — calling handleRequest()
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? action=delete&id=124
+🛠 action=delete — calling handleRequest()
+🛠 Entering controller.php? action=delete&id=123
+🛠 action=delete — calling handleRequest()
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? action=delete&id=106
+🛠 action=delete — calling handleRequest()
+🛠 Entering controller.php? action=delete&id=95
+🛠 action=delete — calling handleRequest()
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? action=delete&id=3
+🛠 action=delete — calling handleRequest()
+🛠 Entering controller.php? action=delete&id=5
+🛠 action=delete — calling handleRequest()
+🛠 Entering controller.php? id=1
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? action=delete&id=61
+🛠 action=delete — calling handleRequest()
+🛠 Entering controller.php? action=delete&id=63
+🛠 action=delete — calling handleRequest()
+🛠 Entering controller.php? action=delete&id=64
+🛠 action=delete — calling handleRequest()
+🛠 Entering controller.php? action=delete&id=65
+🛠 action=delete — calling handleRequest()
+🛠 Entering controller.php? action=delete&id=60
+🛠 action=delete — calling handleRequest()
+🛠 Entering controller.php? action=delete&id=59
+🛠 action=delete — calling handleRequest()
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? action=delete&id=58
+🛠 action=delete — calling handleRequest()
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? action=like&id=107
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=119
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=119
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=125
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=125
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=125
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? action=like&id=125
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=125
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=125
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=119
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=119
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=119
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=125
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=125
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=125
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=125
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=125
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=125
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=125
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=125
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=125
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=125
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? action=like&id=125
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? action=like&id=127
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=127
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=like&id=126
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=126
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=126
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=126
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=like&id=126
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=126
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=126
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=126
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=126
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=126
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=like&id=126
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=126
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=126
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=126
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=126
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=126
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=126
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=126
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=like&id=127
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=127
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=127
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=127
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=127
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=127
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=127
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=127
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=127
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=127
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=like&id=127
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=127
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=127
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=127
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=127
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=127
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=127
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=127
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=127
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=127
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=127
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=127
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=like&id=126
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=126
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=126
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=126
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=126
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=126
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=126
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=126
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=126
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=126
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=126
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=126
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=126
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=126
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=like&id=127
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=127
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=127
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=127
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=127
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=127
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=127
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=127
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=127
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=127
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=127
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=127
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=127
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=127
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=127
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=127
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=like&id=126
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=126
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=126
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=126
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=126
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=126
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=126
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=126
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=126
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=126
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=126
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=126
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=126
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=126
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=126
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=126
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=126
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=126
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=like&id=125
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=125
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=125
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=125
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=125
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=125
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=125
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=125
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=125
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=125
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=like&id=125
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=125
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=125
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=125
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=125
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=125
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=125
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=125
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=125
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=125
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=like&id=125
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=125
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=125
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=125
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=125
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=125
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=125
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=125
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=125
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=125
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=125
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=125
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=125
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=125
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=125
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=125
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=125
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=125
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=125
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=125
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=125
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=125
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=like&id=119
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=119
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=119
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=119
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=119
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=119
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=119
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=119
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=119
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=119
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=119
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=119
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=119
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=119
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=119
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=119
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=119
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=119
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=119
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=119
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=119
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=119
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=119
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=119
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=like&id=119
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=119
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=119
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=119
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=119
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=119
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=119
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=119
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=119
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=119
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=119
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=119
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=119
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=119
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=119
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=119
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=119
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=119
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=119
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=119
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=119
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=119
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=119
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=119
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=119
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=119
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=like&id=127
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=127
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=127
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=127
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=127
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=127
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=127
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=127
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=127
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=127
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=127
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=127
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=127
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=127
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=127
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=127
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=127
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=127
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=127
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=127
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=127
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=127
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=127
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=127
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=127
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=127
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=127
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=127
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=like&id=125
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=125
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=125
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=125
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=125
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=125
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=125
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=125
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=125
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=125
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=125
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=125
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=125
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=125
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=125
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=125
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=125
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=125
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=125
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=125
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=125
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=125
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=125
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=125
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=125
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=125
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=125
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=125
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=125
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=125
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=like&id=119
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=119
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=119
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=119
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=119
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=119
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=119
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=119
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=119
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=119
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=119
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=119
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=119
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=119
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=119
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=119
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=119
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=119
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=119
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=119
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=119
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=119
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=119
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=119
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=119
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=119
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=119
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=119
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=119
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=119
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=119
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=119
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=like&id=125
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=125
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=125
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=125
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=125
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=125
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=125
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=125
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=125
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=125
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=125
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=125
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=125
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=125
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=125
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=125
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=125
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=125
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=125
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=125
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=125
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=125
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=125
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=125
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=125
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=125
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=125
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=125
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=125
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=125
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=125
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=125
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=125
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=125
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? action=like&id=127
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=127
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=like&id=127
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=127
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=127
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=127
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=like&id=126
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=126
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=126
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=126
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=126
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=126
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=like&id=126
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=126
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=126
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=126
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=126
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=126
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=126
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=126
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=like&id=125
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=125
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=125
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=125
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=125
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=125
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=125
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=125
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=125
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=125
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=like&id=125
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=125
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=125
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=125
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=125
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=125
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=125
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=125
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=125
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=125
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=125
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=125
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=like&id=126
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=126
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=126
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=126
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=126
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=126
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=126
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=126
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=126
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=126
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=126
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=126
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=126
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=126
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? 
+🛠 Entering controller.php? error=delete_failed
+🛠 Entering controller.php? error=delete_failed
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? id=4
+🛠 Entering controller.php? id=4
+🛠 Entering controller.php? id=4
+🛠 Entering controller.php? error=delete_failed
+🛠 Entering controller.php? id=4
+🛠 Entering controller.php? id=4
+🛠 Entering controller.php? id=2
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=1
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? id=1
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=1
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? action=like&id=64
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=64
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=like&id=64
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=like&id=64
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=64
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=64
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? id=4
+🛠 Entering controller.php? id=4
+🛠 Entering controller.php? id=4
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=5
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=3
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=1
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=1
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=1
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=1
+🛠 Entering controller.php? action=delete&id=68
+🛠 action=delete — calling handleRequest()
+🛠 Entering controller.php? id=1
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=1
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=1
+🛠 Entering controller.php? id=1
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=1
+🛠 Entering controller.php? id=1
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=1
+🛠 Entering controller.php? id=1
+🛠 Entering controller.php? id=1
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=1
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=1
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=7
+🛠 Entering controller.php? 
+🛠 Entering controller.php? id=7
+🛠 Entering controller.php? action=like&id=77
+🛠 action=like — calling handleRequest()
+🛠 Entering controller.php? action=getLikes&id=77
+🛠 action=getLikes — calling handleRequest()
+🛠 Entering controller.php? action=update
+🛠 action=update — calling handleRequest()
+🛠 Entering controller.php? action=delete&id=77
+🛠 action=delete — calling handleRequest()
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
+🛠 Entering controller.php? 
