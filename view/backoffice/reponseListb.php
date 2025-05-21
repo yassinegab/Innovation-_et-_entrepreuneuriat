@@ -105,7 +105,7 @@ function getStatusClass($statut) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Détails de la consultation - EntrepreHub</title>
+    <title>Détails de la consultation - STELLIFEROUS</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="theme-custom.css">
@@ -117,7 +117,7 @@ function getStatusClass($statut) {
         <!-- Sidebar -->
         <aside class="admin-sidebar">
             <div class="sidebar-header">
-                <h2>EntrepreHub</h2>
+                <h2>STELLIFEROUS</h2>
                 <span class="admin-badge">Admin</span>
             </div>
             

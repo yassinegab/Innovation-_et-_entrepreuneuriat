@@ -230,7 +230,7 @@ $tauxReponse = ($totalConsultations > 0) ? round(($consultationsAvecReponse / $t
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Administration - EntrepreHub</title>
+    <title>Administration - STELLIFEROUS</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="theme-custom.css">

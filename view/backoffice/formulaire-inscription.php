@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestion des Inscriptions - EntrepreHub</title>
+    <title>Gestion des Inscriptions - STELLIFEROUS</title>
     <link rel="stylesheet" href="styleeya.css">
     <link rel="stylesheet" href="theme-customeya.css">
     <link rel="stylesheet" href="admineya.css">

@@ -236,7 +236,7 @@ function timeAgo($datetime)
 
             <div class="header-content">
                 <div class="logo">
-                    <h1>EntrepreHub</h1>
+                    <h1>STELLIFEROUS</h1>
                 </div>
                 <nav class="nav">
                     <button class="nav-toggle" aria-label="Toggle navigation">

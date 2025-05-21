@@ -58,7 +58,7 @@ try {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modifier la réponse - EntrepreHub</title>
+    <title>Modifier la réponse - STELLIFEROUS</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="theme-custom.css">
@@ -70,7 +70,7 @@ try {
         <!-- Sidebar -->
         <aside class="admin-sidebar">
             <div class="sidebar-header">
-                <h2>EntrepreHub</h2>
+                <h2>STELLIFEROUS</h2>
                 <span class="admin-badge">Admin</span>
             </div>
             

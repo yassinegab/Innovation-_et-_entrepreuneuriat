@@ -274,7 +274,7 @@ class InscriptionController {
             </head>
             <body>
                 <div class="header">
-                    <h1>EntrepreHub</h1>
+                    <h1>STELLIFEROUS</h1>
                 </div>
                 <div class="content">
                     <p>Bonjour,</p>
@@ -291,12 +291,12 @@ class InscriptionController {
                     
                     <p>N\'hésitez pas à nous contacter si vous avez des questions.</p>
                     
-                    <a href="https://entreprehub.com/mon-compte" class="btn">Accéder à mon compte</a>
+                    <a href="https://STELLIFEROUS.com/mon-compte" class="btn">Accéder à mon compte</a>
                     
-                    <p>Cordialement,<br>L\'équipe EntrepreHub</p>
+                    <p>Cordialement,<br>L\'équipe STELLIFEROUS</p>
                 </div>
                 <div class="footer">
-                    <p>© 2023 EntrepreHub. Tous droits réservés.</p>
+                    <p>© 2023 STELLIFEROUS. Tous droits réservés.</p>
                     <p>Si vous avez reçu cet email par erreur, merci de nous en informer et de le supprimer.</p>
                 </div>
             </body>
@@ -385,7 +385,7 @@ class InscriptionController {
             </head>
             <body>
                 <div class="header">
-                    <h1>EntrepreHub</h1>
+                    <h1>STELLIFEROUS</h1>
                 </div>
                 <div class="content">
                     <p>Bonjour,</p>
@@ -401,12 +401,12 @@ class InscriptionController {
                     
                     <p>Nous vous invitons à consulter nos autres événements qui pourraient vous intéresser.</p>
                     
-                    <a href="https://entreprehub.com/evenements" class="btn">Découvrir d\'autres événements</a>
+                    <a href="https://STELLIFEROUS.com/evenements" class="btn">Découvrir d\'autres événements</a>
                     
-                    <p>Cordialement,<br>L\'équipe EntrepreHub</p>
+                    <p>Cordialement,<br>L\'équipe STELLIFEROUS</p>
                 </div>
                 <div class="footer">
-                    <p>© 2023 EntrepreHub. Tous droits réservés.</p>
+                    <p>© 2023 STELLIFEROUS. Tous droits réservés.</p>
                     <p>Si vous avez reçu cet email par erreur, merci de nous en informer et de le supprimer.</p>
                 </div>
             </body>
@@ -415,7 +415,7 @@ class InscriptionController {
             // Version texte
             $mail->AltBody = "Information concernant votre inscription à l'événement: " . $nom_evenement . "\n\n" .
                             "Nous vous informons que votre demande d'inscription n'a pas pu être acceptée.\n\n" .
-                            "Cordialement,\nL'équipe EntrepreHub";
+                            "Cordialement,\nL'équipe STELLIFEROUS";
             
             $mail->send();
             error_log("Email de refus envoyé avec succès à: " . $email);

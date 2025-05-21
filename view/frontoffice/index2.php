@@ -240,7 +240,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['inscription'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EntrepreHub - Empowering Entrepreneurs</title>
+    <title>STELLIFEROUS - Empowering Entrepreneurs</title>
     
     <link rel="stylesheet" href="assets/style.css">
     <link rel="stylesheet" href="assets/theme-custom.css">
@@ -352,7 +352,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['inscription'])) {
 
             <div class="header-content">
                 <div class="logo">
-                    <h1>EntrepreHub</h1>
+                    <h1>STELLIFEROUS</h1>
                 </div>
                 <nav class="nav">
                     <button class="nav-toggle" aria-label="Toggle navigation">
@@ -503,7 +503,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['inscription'])) {
                                 <h2>À propos de nous</h2>
                                 <p>Votre partenaire dans le voyage entrepreneurial</p>
                             </div>
-                            <p>EntrepreHub a été fondé en 2020 avec une mission claire : démocratiser l'entrepreneuriat
+                            <p>STELLIFEROUS a été fondé en 2020 avec une mission claire : démocratiser l'entrepreneuriat
                                 et rendre les ressources d'affaires accessibles à tous. Notre plateforme combine
                                 technologie, expertise et communauté pour aider les entrepreneurs à chaque étape de leur
                                 parcours.</p>
@@ -589,13 +589,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['inscription'])) {
                 <div class="container">
                     <div class="section-header">
                         <h2>Ce que disent nos entrepreneurs</h2>
-                        <p>Découvrez comment EntrepreHub a aidé des entrepreneurs comme vous</p>
+                        <p>Découvrez comment STELLIFEROUS a aidé des entrepreneurs comme vous</p>
                     </div>
                     <div class="testimonial-slider">
                         <div class="testimonial-track">
                             <div class="testimonial-card">
                                 <div class="testimonial-content">
-                                    <p>"EntrepreHub a complètement transformé mon parcours entrepreneurial. Les
+                                    <p>"STELLIFEROUS a complètement transformé mon parcours entrepreneurial. Les
                                         ressources et le mentorat que j'ai reçus ont été inestimables pour le lancement
                                         de ma startup."</p>
                                 </div>
@@ -611,7 +611,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['inscription'])) {
                             </div>
                             <div class="testimonial-card">
                                 <div class="testimonial-content">
-                                    <p>"Grâce à la communauté EntrepreHub, j'ai pu connecter avec des investisseurs qui
+                                    <p>"Grâce à la communauté STELLIFEROUS, j'ai pu connecter avec des investisseurs qui
                                         croyaient en ma vision. Maintenant, mon entreprise est en pleine croissance."
                                     </p>
                                 </div>
@@ -627,7 +627,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['inscription'])) {
                             </div>
                             <div class="testimonial-card">
                                 <div class="testimonial-content">
-                                    <p>"Les ateliers et les cours en ligne d'EntrepreHub m'ont donné les compétences
+                                    <p>"Les ateliers et les cours en ligne d'STELLIFEROUS m'ont donné les compétences
                                         dont j'avais besoin pour transformer mon idée en une entreprise rentable."</p>
                                 </div>
                                 <div class="testimonial-author">
@@ -690,7 +690,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['inscription'])) {
                                     </div>
                                     <div class="method-details">
                                         <h4>Email</h4>
-                                        <p>contact@entreprehub.com</p>
+                                        <p>contact@STELLIFEROUS.com</p>
                                     </div>
                                 </div>
                                 <div class="contact-method">
@@ -758,7 +758,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['inscription'])) {
                 <div class="container">
                     <div class="cta-content">
                         <h2>Prêt à transformer votre vision en réalité?</h2>
-                        <p>Rejoignez des milliers d'entrepreneurs qui ont déjà commencé leur voyage avec EntrepreHub.
+                        <p>Rejoignez des milliers d'entrepreneurs qui ont déjà commencé leur voyage avec STELLIFEROUS.
                         </p>
                         <a href="#" class="btn btn-primary">Commencer gratuitement</a>
                     </div>
@@ -813,7 +813,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['inscription'])) {
         <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">
-                    <h2>EntrepreHub</h2>
+                    <h2>STELLIFEROUS</h2>
                     <p>Votre partenaire dans le voyage entrepreneurial</p>
                     <div class="social-links">
                         <a href="#" aria-label="Facebook">
@@ -893,7 +893,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['inscription'])) {
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2023 EntrepreHub. Tous droits réservés.</p>
+                <p>&copy; 2023 STELLIFEROUS. Tous droits réservés.</p>
             </div>
         </div>
     </footer>

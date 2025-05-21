@@ -120,7 +120,7 @@ if (isset($_GET['edit']) && is_numeric($_GET['edit'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Administration - EntrepreHub</title>
+    <title>Administration - STELLIFEROUS</title>
     <link rel="stylesheet" href="styleeya.css">
     <link rel="stylesheet" href="theme-customeya.css">
     <link rel="stylesheet" href="admineya.css">
