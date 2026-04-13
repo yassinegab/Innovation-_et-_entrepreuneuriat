@@ -3,7 +3,7 @@
 
 ## 📖 Overview
 
-**Entrepreneurconnect** is a robust, full-stack PHP web ecosystem designed for community engagement and service tracking. Developed as part of the **PIDEV – 2nd Year pre-engineering Program**, this platform serves as the web-integrated counterpart to the SosI Wellbeing desktop suite.
+**Entrepreneurconnect** is a robust, full-stack PHP web ecosystem designed for community engagement and service tracking. Developed as part of the **PIDEV – 2nd Year pre-engineering Program**.
 
 The project leverages a clean **MVC (Model-View-Controller)** architecture to ensure scalability, maintainability, and clear separation of concerns between business logic, data, and user interface.
 
